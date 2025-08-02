@@ -131,10 +131,27 @@
     pkgs.lazygit
     pkgs.ripgrep
     pkgs.home-manager
+    pkgs.gcc
+
+    # general global programming tools
+    pkgs.rustup
+    pkgs.luajitPackages.luarocks_bootstrap
+    pkgs.go
+    pkgs.nodejs_24
+    pkgs.python314
+    pkgs.unzip
+    pkgs.haskellPackages.ghcup
+
   ];
 
 
-
+    #systemd.user.targets.default.wants = [ "config-nvim.mount" ];
+    systemd.mounts = [{
+        what = "/home/lucas/.config/nixos-config/submodules/nvim";
+        where = "/home/lucas/.config/nvim";
+        type = "none";
+        options = "bind";
+    }];
 
   # NEVER CHANGE THIS, EVEN IF SISTEM IS UPDATED
   # Or perhaps read the docs before changing it

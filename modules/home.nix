@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 
 {
 
@@ -30,6 +30,4 @@
         };
     };
 
-
-  home.file.".config/nvim".source = inputs.nvim-config;
 }
