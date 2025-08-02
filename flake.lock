@@ -56,15 +56,14 @@
     "nvim-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=",
         "path": "./submodules/nvim",
         "type": "path"
       },
       "original": {
         "path": "./submodules/nvim",
         "type": "path"
-      }
+      },
+      "parent": []
     },
     "root": {
       "inputs": {
