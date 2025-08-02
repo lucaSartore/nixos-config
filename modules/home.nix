@@ -1,6 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+
     home.username = "lucas";
     home.homeDirectory = "/home/lucas";
     /* The home.stateVersion option does not have a default and must be set */
@@ -29,4 +30,6 @@
         };
     };
 
+
+  home.file.".config/nvim".source = inputs.nvim-config;
 }
