@@ -67,10 +67,16 @@
 
   # default os packages
   environment.systemPackages = with pkgs; [
+    # utility
     pkgs.openssh_hpn
     pkgs.git
     pkgs.google-chrome
     pkgs.home-manager
+
+    # themes
+    pkgs.papirus-icon-theme
+    pkgs.darkly
+
   ];
 
   programs.nix-ld.enable = true;

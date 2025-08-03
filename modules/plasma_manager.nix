@@ -1,10 +1,16 @@
 { config, pkgs, lib, ... }:
 
 {
+
     programs.plasma = {
         enable = true;
         workspace = {
-          lookAndFeel = "org.kde.breezedark.desktop";
+          colorScheme = "Gray";
+          iconTheme = "Papirus-Dark";
         };
+
+        configFile = {
+            "kdeglobals"."KDE"."widgetStyle" = "Darkly";
+        }
     };
 }
