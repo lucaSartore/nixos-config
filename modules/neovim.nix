@@ -36,6 +36,7 @@ in {
     pkgs.nodejs_24
     pkgs.python314
     pkgs.unzip
+    pkgs.xclip
   ];
 
   # alias
