@@ -132,21 +132,21 @@
     pkgs.openssh_hpn
     pkgs.git
     pkgs.google-chrome
-    pkgs.neovim
-    pkgs.lazygit
-    pkgs.ripgrep
     pkgs.home-manager
-    pkgs.gcc
 
-    # general global programming tools
-    pkgs.rustup
-    pkgs.luajitPackages.luarocks_bootstrap
-    pkgs.go
-    pkgs.nodejs_24
-    pkgs.python314
-    pkgs.unzip
     pkgs.kanata
 
+    # general global programming tools
+    # pkgs.rustup
+    # pkgs.ripgrep
+    # pkgs.neovim
+    # pkgs.lazygit
+    # pkgs.gcc
+    # pkgs.luajitPackages.luarocks_bootstrap
+    # pkgs.go
+    # pkgs.nodejs_24
+    # pkgs.python314
+    # pkgs.unzip
   ];
 
   programs.nix-ld.enable = true;

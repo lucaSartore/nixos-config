@@ -1,14 +1,41 @@
 { config, pkgs, lib, ... }:
 
-{
-  systemd.services.cloneConfigs = {
-    description = "Clone neovim config into .config";
-    after = [ "network.target" "home.mount" ];
+let
+  cloneScript = pkgs.writeShellScript "setup-nvim-repo" ''
+    set -eux
+    if [ ! -d /home/lucas/.config/nvim ]; then
+      ${pkgs.git}/bin/git clone https://github.com/lucaSartore/nvim /home/lucas/.config/nvim
+      cd /home/lucas/.config/nvim
+      ${pkgs.git}/bin/git remote set-url origin git@github.com:lucaSartore/nvim.git
+    fi
+  '';
+in {
+
+  systemd.services.cloneNvimConfigs = {
+    description = "Clone nvim config into .config folder";
+    after = [ "network.target" ];
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       Type = "oneshot";
       User = "lucas";
-      ExecStart = "${pkgs.git}/bin/git clone git@github.com:lucaSartore/nvim.git /home/lucas/.config/nvim-test";
+      ExecStart = "${cloneScript}";
     };
   };
+
+
+  environment.systemPackages = with pkgs; [
+    # the neovim program
+    pkgs.neovim
+    # general dependency for various plugins/lsp
+    pkgs.rustup
+    pkgs.ripgrep
+    pkgs.lazygit
+    pkgs.gcc
+    pkgs.luajitPackages.luarocks_bootstrap
+    pkgs.go
+    pkgs.nodejs_24
+    pkgs.python314
+    pkgs.unzip
+  ];
 }
+
