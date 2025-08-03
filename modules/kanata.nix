@@ -17,6 +17,10 @@ let
   '';
 in {
 
+  environment.systemPackages = with pkgs; [
+    pkgs.kanata
+  ];
+
   systemd.services.cloneKanataConfigs = {
     description = "Clone nvim config into .config folder";
     after = [ "network.target" ];
