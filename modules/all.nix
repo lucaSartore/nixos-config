@@ -2,9 +2,14 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
+
+  imports = [
+    ./neovim.nix 
+  ];
+
 
   # Bootloader.
   # boot.loader.systemd-boot.enable = true;
@@ -140,18 +145,23 @@
     pkgs.nodejs_24
     pkgs.python314
     pkgs.unzip
-    pkgs.haskellPackages.ghcup
+    pkgs.kanata
 
   ];
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries for unpackaged programs
+    # here, NOT in environment.systemPackages
+  ];
 
-    #systemd.user.targets.default.wants = [ "config-nvim.mount" ];
-    systemd.mounts = [{
-        what = "/home/lucas/.config/nixos-config/submodules/nvim";
-        where = "/home/lucas/.config/nvim";
-        type = "none";
-        options = "bind";
-    }];
+  services.kanata.enable = true;
+  services.kanata.keyboards.main-keyboard.configFile = "/home/lucas/.config/nixos-config/kanata.kbd";
+
+  systemd.services.kanata-main-keyboard.serviceConfig = {
+    ProtectHome = lib.mkForce "tmpfs";
+    BindReadOnlyPaths = "/home/lucas/.config/nixos-config/kanata.kbd";
+  };
 
   # NEVER CHANGE THIS, EVEN IF SISTEM IS UPDATED
   # Or perhaps read the docs before changing it
