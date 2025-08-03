@@ -78,6 +78,10 @@
     # Add any missing dynamic libraries for unpackaged programs
   ];
 
+  # Enable the KDE Plasma Desktop Environment.
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
+
   # NEVER CHANGE THIS, EVEN IF SISTEM IS UPDATED
   # Or perhaps read the docs before changing it
   system.stateVersion = "25.05";

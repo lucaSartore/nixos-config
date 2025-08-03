@@ -10,7 +10,6 @@
     ./neovim.nix 
     ./kanata.nix 
     ./os.nix
-    ./kde.nix
     ./gostty.nix
   ];
 
