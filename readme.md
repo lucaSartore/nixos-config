@@ -18,3 +18,5 @@ some sensitive informations that can't be put in the git repo
     ```
     if you want to be able to push to upstream (or log in using credentials, but this is easyer)
 
+3) **Set the default configurations**
+    Search for `Default applications` and set them as you wish
