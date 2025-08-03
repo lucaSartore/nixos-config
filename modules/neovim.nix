@@ -37,5 +37,12 @@ in {
     pkgs.python314
     pkgs.unzip
   ];
-}
 
+  # alias
+  programs.neovim = {
+    enable = true;
+    vimAlias = true;
+    viAlias = true;
+  };
+
+}
