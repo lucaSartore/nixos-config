@@ -8,6 +8,7 @@
 
   imports = [
     ./neovim.nix 
+    ./kanata.nix 
   ];
 
 
@@ -154,14 +155,6 @@
     # Add any missing dynamic libraries for unpackaged programs
     # here, NOT in environment.systemPackages
   ];
-
-  services.kanata.enable = true;
-  services.kanata.keyboards.main-keyboard.configFile = "/home/lucas/.config/nixos-config/kanata.kbd";
-
-  systemd.services.kanata-main-keyboard.serviceConfig = {
-    ProtectHome = lib.mkForce "tmpfs";
-    BindReadOnlyPaths = "/home/lucas/.config/nixos-config/kanata.kbd";
-  };
 
   # NEVER CHANGE THIS, EVEN IF SISTEM IS UPDATED
   # Or perhaps read the docs before changing it
