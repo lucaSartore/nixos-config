@@ -1,6 +1,10 @@
 { config, pkgs, inputs, lib, ... }:
-
 {
+
+    imports = [
+        ./plasma_manager.nix
+    ];
+
 
     home.username = "lucas";
     home.homeDirectory = "/home/lucas";
@@ -38,4 +42,5 @@
 
         [overrides]
     '';
+
 }

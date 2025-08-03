@@ -14,11 +14,17 @@
       flake = false;
     };
 
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
     # Optional overlay for bleeding‑edge packages
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, plasma-manager, ... }:
     {
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
@@ -28,6 +34,9 @@
                   home-manager.useGlobalPkgs = true;
                   home-manager.useUserPackages = true;
                   home-manager.users.lucas = ./modules/home.nix;
+                  home-manager.sharedModules = [
+                    plasma-manager.homeManagerModules.plasma-manager
+                  ];
                   home-manager.extraSpecialArgs = {
                     inherit inputs;
                   };
