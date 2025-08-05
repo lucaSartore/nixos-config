@@ -25,6 +25,7 @@
           "org.kde.plasma.systemmonitor.cpucore"
           "org.kde.plasma.systemmonitor.memory"
           "org.kde.plasma.systemtray"
+          "org.kde.plasma.digitalclock "
           "org.kde.plasma.showdesktop"
         ];
       }
