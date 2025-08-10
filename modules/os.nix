@@ -73,6 +73,9 @@
     pkgs.google-chrome
     pkgs.home-manager
 
+    # for browser integration
+    pkgs.libsForQt5.plasma-browser-integration
+
     # themes
     pkgs.papirus-icon-theme
     pkgs.darkly
