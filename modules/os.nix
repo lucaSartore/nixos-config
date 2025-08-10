@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
 
@@ -9,7 +9,11 @@
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.useOSProber = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nix.settings = {
+    # enabling flakes
+    experimental-features = [ "nix-command" "flakes" ];
+  };
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -73,6 +77,8 @@
     pkgs.google-chrome
     pkgs.home-manager
     pkgs.vscode
+    pkgs.kitty
+    # pkgs.hyprland
 
     # for browser integration
     pkgs.libsForQt5.plasma-browser-integration
@@ -80,7 +86,6 @@
     # themes
     pkgs.papirus-icon-theme
     pkgs.darkly
-
   ];
 
   programs.nix-ld.enable = true;

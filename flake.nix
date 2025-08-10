@@ -20,6 +20,7 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+
     # Optional overlay for bleeding‑edge packages
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
@@ -29,6 +30,9 @@
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
+            specialArgs = {
+              inherit inputs;
+            };
             modules = [
                 home-manager.nixosModules.home-manager{
                   home-manager.useGlobalPkgs = true;
