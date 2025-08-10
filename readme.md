@@ -20,3 +20,6 @@ some sensitive informations that can't be put in the git repo
 
 3) **Set the default configurations**
     Search for `Default applications` and set them as you wish
+
+4) **Log in to vscode**
+    Log in to vscode using github, and then synchronize settings so that you can get all of your extensions

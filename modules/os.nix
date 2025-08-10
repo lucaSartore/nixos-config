@@ -72,6 +72,7 @@
     pkgs.git
     pkgs.google-chrome
     pkgs.home-manager
+    pkgs.vscode
 
     # for browser integration
     pkgs.libsForQt5.plasma-browser-integration
