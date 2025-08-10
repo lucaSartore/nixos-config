@@ -1,6 +1,9 @@
 { config, pkgs, inputs, lib, ... }: {
 
-  imports = [ ./plasma_manager.nix ];
+  imports = [ 
+    ./plasma_manager.nix
+    ./hyprland.nix
+  ];
 
   home.username = "lucas";
   home.homeDirectory = "/home/lucas";
