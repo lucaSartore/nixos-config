@@ -83,6 +83,13 @@
     pkgs.dotnetCorePackages.sdk_9_0-bin
     pkgs.dotnetCorePackages.sdk_8_0-bin
 
+    # Office and other programs
+    pkgs.libreoffice-qt6-fresh
+    pkgs.gimp3-with-plugins
+    pkgs.davinci-resolve
+    pkgs.xournalpp
+    pkgs.rnote
+
     # for browser integration
     pkgs.libsForQt5.plasma-browser-integration
 
