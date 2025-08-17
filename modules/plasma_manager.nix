@@ -14,7 +14,6 @@
     };
 
     panels = [
-      # Windows-like panel at the bottom
       {
         location = "bottom";
         widgets = [
@@ -60,10 +59,65 @@
       "kdeglobals"."KDE"."widgetStyle" = "Darkly";
       # scale of fonts/ui elements
       "kwinrc"."Xwayland"."Scale" = 1.5;
-      # number of virtual desktops
+      # 3 virtual desktop in one single row
       "kwinrc"."Desktops"."Number" = 3;
+      "kwinrc"."Desktops"."Rows" = 1;
       # Speed up animations compared to normal
       "kdeglobals"."KDE"."AnimationDurationFactor" = 0.35355339059327373;
+      # Enabling krohnkite (the tiling window manager) 
+      "kwinrc"."Plugins"."krohnkiteEnabled" = true;
+      # do not re-open old window when re-booting
+      "ksmserverrc"."General"."loginMode" = "emptySession";
     };
-  };
+
+    shortcuts = {
+          ksmserver = {
+            "Lock Session" = [
+              "Screensaver"
+              "Meta+Ctrl+Alt+L"
+            ];
+          };
+
+          kwin = {
+              # Manage Krohnkite layouts
+              "KrohnkiteIncrease" = "Meta+I";
+              "KrohnkiteDecrease" = "Meta+Shift+I";
+              "KrohnkiteFocusNext" = "Meta+Shift+\\";
+              "KrohnkiteFocusPrev" = "Meta+\\";
+
+              # 3 most useful layouts
+              "KrohnkiteTileLayout" = "Meta+Shift+T";
+              "KrohnkiteTreeColumnLayout" = "Meta+Shift+C";
+              "KrohnkiteBTreeLayout" = "Meta+Shift+B";
+
+              # Move in and out float layout
+              "KrohnkiteFloatAll" = "Meta+T";
+
+              # Window management
+              "Expose" = "Meta+,";
+              "Window Close" = "Meta+Q";
+              "Window Minimize" = "Meta+M";
+              "Window Fullscreen" = "Meta+F";
+
+              # move between windows
+              "KrohnkiteFocusLeft" = "Meta+H";
+              "KrohnkiteFocusDown" = "Meta+J";
+              "KrohnkiteFocusUp" = "Meta+K";
+              "KrohnkiteFocusRight" = "Meta+L";
+
+              # Mve windows around
+              "KrohnkiteShiftLeft" = "Meta+Shift+H";
+              "KrohnkiteShiftDown" = "Meta+Shift+J";
+              "KrohnkiteShiftUp" = "Meta+Shift+K";
+              "KrohnkiteShiftRight" = "Meta+Shift+L";
+
+              # set of options to resize the windows
+              "KrohnkiteShrinkWidth" = "Meta+Ctrl+H";
+              "KrohnkiteGrowHeight" = "Meta+Ctrl+J";
+              "KrohnkiteShrinkHeight" = "Meta+Ctrl+K";
+              "KrohnkitegrowWidth" = "Meta+Ctrl+L";
+          };
+
+        };
+      };
 }

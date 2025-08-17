@@ -78,7 +78,7 @@
     pkgs.home-manager
     pkgs.vscode
     pkgs.kitty
-    # pkgs.hyprland
+    pkgs.kdePackages.krohnkite
 
     # for browser integration
     pkgs.libsForQt5.plasma-browser-integration
