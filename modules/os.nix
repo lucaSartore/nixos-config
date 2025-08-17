@@ -77,8 +77,8 @@
     pkgs.google-chrome
     pkgs.home-manager
     pkgs.vscode
-    pkgs.kitty
     pkgs.kdePackages.krohnkite
+    pkgs.conda
 
     # for browser integration
     pkgs.libsForQt5.plasma-browser-integration
