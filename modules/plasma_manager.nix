@@ -88,10 +88,11 @@
               "KrohnkiteFocusNext" = "Meta+Shift+\\";
               "KrohnkiteFocusPrev" = "Meta+\\";
 
-              # 3 most useful layouts
+              # most useful layouts
               "KrohnkiteTileLayout" = "Meta+Shift+T";
               "KrohnkiteTreeColumnLayout" = "Meta+Shift+C";
               "KrohnkiteBTreeLayout" = "Meta+Shift+B";
+              "KrohnkiteMonocleLayout" = "Meta+Shift+M";
 
               # Move in and out float layout
               "KrohnkiteFloatAll" = "Meta+T";
