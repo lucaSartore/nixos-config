@@ -74,11 +74,14 @@
     # utility
     pkgs.openssh_hpn
     pkgs.git
+    pkgs.git-credential-manager
     pkgs.google-chrome
     pkgs.home-manager
     pkgs.vscode
     pkgs.kdePackages.krohnkite
     pkgs.conda
+    pkgs.dotnetCorePackages.sdk_9_0-bin
+    pkgs.dotnetCorePackages.sdk_8_0-bin
 
     # for browser integration
     pkgs.libsForQt5.plasma-browser-integration
