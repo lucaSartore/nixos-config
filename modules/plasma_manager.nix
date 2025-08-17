@@ -68,6 +68,9 @@
       "kwinrc"."Plugins"."krohnkiteEnabled" = true;
       # do not re-open old window when re-booting
       "ksmserverrc"."General"."loginMode" = "emptySession";
+      # This disable the (annoying) feature that allow you to show all virtual desktops
+      # when moving the mouse to the top-left corner of the screen
+      "kwinrc"."Effect-overview"."BorderActivate" = 9;
     };
 
     shortcuts = {
