@@ -82,6 +82,8 @@
     pkgs.conda
     pkgs.dotnetCorePackages.sdk_9_0-bin
     pkgs.dotnetCorePackages.sdk_8_0-bin
+    pkgs.postman
+    pkgs.discord
 
     # Office and other programs
     pkgs.libreoffice-qt6-fresh
