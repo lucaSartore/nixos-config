@@ -87,8 +87,6 @@
 
     # Office and other programs
     pkgs.libreoffice-qt6-fresh
-    pkgs.gimp3-with-plugins
-    pkgs.davinci-resolve
     pkgs.xournalpp
     pkgs.rnote
 
