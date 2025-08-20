@@ -50,6 +50,29 @@
                 ./hosts/desktop
             ];
         };
+
+        laptop = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            specialArgs = {
+              inherit inputs;
+            };
+            modules = [
+                home-manager.nixosModules.home-manager{
+                  home-manager.useGlobalPkgs = true;
+                  home-manager.useUserPackages = true;
+                  home-manager.users.lucas = ./modules/home.nix;
+                  home-manager.sharedModules = [
+                    plasma-manager.homeManagerModules.plasma-manager
+                  ];
+                  home-manager.extraSpecialArgs = {
+                    inherit inputs;
+                  };
+                }
+                ./modules/all.nix
+                #./modules/home.nix
+                ./hosts/laptop
+            ];
+        };
       };
     };
 }
