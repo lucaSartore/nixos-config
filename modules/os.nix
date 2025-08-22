@@ -77,6 +77,7 @@
     pkgs.git-credential-manager
     pkgs.google-chrome
     pkgs.home-manager
+    pkgs.fd
     pkgs.vscode
     pkgs.kdePackages.krohnkite
     pkgs.conda
