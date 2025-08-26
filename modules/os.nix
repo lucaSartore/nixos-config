@@ -2,13 +2,17 @@
 
 {
 
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.devices = [ "nodev" ];
-  boot.loader.grub.efiInstallAsRemovable = true;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.useOSProber = true;
-
+  boot.loader = {
+    efi = { canTouchEfiVariables = true; };
+    grub = {
+      # Bootloader.
+      enable = true;
+      devices = [ "nodev" ];
+      # efiInstallAsRemovable = true;
+      efiSupport = true;
+      useOSProber = true;
+    };
+  };
 
   nix.settings = {
     # enabling flakes
@@ -42,7 +46,6 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -54,17 +57,13 @@
     pulse.enable = true;
   };
 
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.lucas = {
     isNormalUser = true;
     description = "Luca Sartore";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      kdePackages.kate
-    ];
+    packages = with pkgs; [ kdePackages.kate ];
   };
-
 
   # Allow unfree packages (better for driver compatibility)
   nixpkgs.config.allowUnfree = true;
@@ -101,9 +100,10 @@
   ];
 
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    # Add any missing dynamic libraries for unpackaged programs
-  ];
+  programs.nix-ld.libraries = with pkgs;
+    [
+      # Add any missing dynamic libraries for unpackaged programs
+    ];
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
