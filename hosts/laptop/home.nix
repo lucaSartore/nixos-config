@@ -1,6 +1,8 @@
 { config, pkgs, lib, ... }:
 
 {
+  imports = [ ../../modules/home.nix ];
+
   programs.plasma = {
 
     # laptop specific touchpads input

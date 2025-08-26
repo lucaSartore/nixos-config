@@ -34,13 +34,12 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.lucas = ./modules/home.nix;
+            home-manager.users.lucas = ./hosts/desktop/home.nix;
             home-manager.sharedModules =
               [ plasma-manager.homeManagerModules.plasma-manager ];
             home-manager.extraSpecialArgs = { inherit inputs; };
           }
           ./modules/all.nix
-          #./modules/home.nix
           ./hosts/desktop
         ];
       };
@@ -53,13 +52,12 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.lucas = ./modules/home.nix;
+            home-manager.users.lucas = ./hosts/laptop/home.nix;
             home-manager.sharedModules =
               [ plasma-manager.homeManagerModules.plasma-manager ];
             home-manager.extraSpecialArgs = { inherit inputs; };
           }
           ./modules/all.nix
-          #./modules/home.nix
           ./hosts/laptop
         ];
       };
