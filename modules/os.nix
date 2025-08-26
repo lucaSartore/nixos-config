@@ -85,6 +85,7 @@
     pkgs.dotnetCorePackages.sdk_8_0-bin
     pkgs.postman
     pkgs.discord
+    pkgs.kdePackages.partitionmanager
 
     # Office and other programs
     pkgs.libreoffice-qt6-fresh
