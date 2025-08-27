@@ -85,6 +85,7 @@
     pkgs.postman
     pkgs.discord
     pkgs.kdePackages.partitionmanager
+    pkgs.openvpn
 
     # Office and other programs
     pkgs.libreoffice-qt6-fresh
