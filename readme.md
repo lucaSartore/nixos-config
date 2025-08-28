@@ -24,8 +24,12 @@ some sensitive informations that can't be put in the git repo
 4) **Log in to vscode**
     Log in to vscode using github, and then synchronize settings so that you can get all of your extensions
 
-4) **Disable all chrome shortcuts**
+5) **Disable all chrome shortcuts**
     For some reason chrome some extension's shortcut doesn't play nice with KDE, and chrome open the 
     shortcut settings the first time it is latched
     To fix it go to [chrome://extensions/shortcuts](chrome://extensions/shortcuts)
     and remove all shortcuts.
+
+6) **Copy openvpn files**
+    Copy all the .ovpn files inside `~/openvpn/*
+
