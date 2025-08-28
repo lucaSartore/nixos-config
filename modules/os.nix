@@ -86,6 +86,8 @@
     pkgs.discord
     pkgs.kdePackages.partitionmanager
     pkgs.openvpn
+    pkgs.remmina #remote desktop
+    pkgs.dbeaver-bin
 
     # Office and other programs
     pkgs.libreoffice-qt6-fresh
