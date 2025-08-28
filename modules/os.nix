@@ -87,7 +87,10 @@
     pkgs.kdePackages.partitionmanager
     pkgs.openvpn
     pkgs.remmina #remote desktop
-    pkgs.dbeaver-bin
+
+    # Database drivers
+    pkgs.dbeaver-bin # server client UI
+    pkgs.libmysqlclient.dev # dependency of mariadb's python package
 
     # Office and other programs
     pkgs.libreoffice-qt6-fresh
