@@ -11,6 +11,7 @@
     ./kanata.nix 
     ./os.nix
     ./gostty.nix
+    ./docker.nix
   ];
 
 }

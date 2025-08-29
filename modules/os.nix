@@ -87,10 +87,12 @@
     pkgs.kdePackages.partitionmanager
     pkgs.openvpn
     pkgs.remmina #remote desktop
+    pkgs.docker
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
-    pkgs.libmysqlclient.dev # dependency of mariadb's python package
+    pkgs.libmysqlclient # dependency of mariadb's python package
+    pkgs.libmysqlclient.dev
 
     # Office and other programs
     pkgs.libreoffice-qt6-fresh
@@ -104,6 +106,8 @@
     pkgs.papirus-icon-theme
     pkgs.darkly
   ];
+
+  virtualisation.docker.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs;
