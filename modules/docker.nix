@@ -16,8 +16,6 @@
     };
   };
 
-  virtualisation.docker.enable = true;
-
   users.users.lucas.extraGroups = [ "docker" ];
 
 }
