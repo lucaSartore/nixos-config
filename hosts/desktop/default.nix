@@ -17,6 +17,9 @@
     pkgs.davinci-resolve
   ];
 
+  # using lower resolution than default one to avoid lagging
+  boot.loader.grub.gfxmodeEfi = "1280x720";
+
   hardware.nvidia = {
     # Modesetting is required.
     modesetting.enable = true;
