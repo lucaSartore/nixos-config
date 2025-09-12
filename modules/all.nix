@@ -12,6 +12,7 @@
     ./os.nix
     ./gostty.nix
     ./docker.nix
+    ./shells.nix
   ];
 
 }
