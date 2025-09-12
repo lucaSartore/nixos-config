@@ -109,6 +109,8 @@
     pkgs.acl
   ];
 
+  # Use same standard in linux and windows
+  time.hardwareClockInLocalTime = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs;
