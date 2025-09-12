@@ -37,7 +37,6 @@
                 launchers = [
                   "applications:org.kde.dolphin.desktop"
                   "applications:google-chrome.desktop"
-                  "applications:code.desktop"
                   "applications:com.mitchellh.ghostty.desktop"
                 ];
               };
