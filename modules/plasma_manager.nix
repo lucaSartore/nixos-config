@@ -7,7 +7,7 @@
   programs.plasma = {
     enable = true;
     # this is useful when testing to remove all previous settings and just use this configuration's one
-    overrideConfig = true;
+    # overrideConfig = true;
     workspace = {
       colorScheme = "Darkly";
       iconTheme = "Papirus-Dark";

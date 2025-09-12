@@ -10,5 +10,9 @@
   # Enable OpenGL
   hardware.graphics = { enable = true; };
 
-  environment.systemPackages = [ pkgs.kdePackages.wacomtablet ];
+  environment.systemPackages = [
+    # touchpad specific packages
+    pkgs.kdePackages.wacomtablet
+    pkgs.maliit-keyboard
+  ];
 }
