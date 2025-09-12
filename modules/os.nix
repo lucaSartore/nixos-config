@@ -87,7 +87,6 @@
     pkgs.kdePackages.partitionmanager
     pkgs.openvpn
     pkgs.remmina #remote desktop
-    pkgs.docker
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
@@ -105,14 +104,19 @@
     # themes
     pkgs.papirus-icon-theme
     pkgs.darkly
+
+
+    pkgs.acl
   ];
 
-  virtualisation.docker.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs;
     [
-      # Add any missing dynamic libraries for unpackaged programs
+      # Add any missing dynamic libraries (.so) for unpackaged programs
+
+      pkgs.libmysqlclient # dependency of mariadb's python package
+      pkgs.libmysqlclient.dev
     ];
 
   # Enable the KDE Plasma Desktop Environment.

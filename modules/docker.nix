@@ -4,6 +4,10 @@
 
   # environment.systemPackages = with pkgs; [ pkgs.docker ];
 
+  environment.systemPackages = with pkgs; [
+    docker-compose 
+  ];
+
   virtualisation.docker = {
     enable = true;
     # Set up resource limits
@@ -16,8 +20,5 @@
     };
   };
 
-  virtualisation.docker.enable = true;
-
   users.users.lucas.extraGroups = [ "docker" ];
-
 }
