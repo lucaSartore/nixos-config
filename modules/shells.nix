@@ -4,9 +4,8 @@
 {
 
   programs.bash = {
-    enable = true;
     shellAliases = {
-      cshell-ros-olrc = "nix develop ~/nixos-config/shells/ros-olrc";
+      cshell-ros-olrc = "nix develop ~/.config/nixos-config/shells/ros-olrc";
     };
   };
 }
