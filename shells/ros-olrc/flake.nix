@@ -61,8 +61,13 @@
                 ];
               })
           ];
-          # Add here the folder containing the "orc" folder
-          PYTHONPATH = "/home/lucas/Desktop/test";
+
+          shellHook = ''
+              abs_path="$(realpath "$PWD/..")"
+              export PYTHONPATH="$abs_path:$PYTHONPATH"
+              echo -e "\033[0;31mAdded $abs_path to PYTHONPATH\033[0m"
+              echo -e "\033[0;31mIf this is not the folder containing the \"orc\" repo, the code will not work\033[0m"
+            '';
 
         };
       });
