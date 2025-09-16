@@ -87,6 +87,8 @@
     pkgs.kdePackages.partitionmanager
     pkgs.openvpn
     pkgs.remmina #remote desktop
+    pkgs.anydesk
+    pkgs.zoom-us
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
@@ -109,6 +111,38 @@
     pkgs.acl
   ];
 
+  # nixpkgs.overlays = [
+  #     (final: prev: {
+  #       libmysqlclient = prev.libmysqlclient.overrideAttrs (_: {
+  #         # src = prev.fetchFromGitHub
+  #         #   { 
+  #         #     owner= "lucaSartore";
+  #         #     # owner= "NixOS";
+  #         #     repo="nixpkgs";
+  #         #     rev="nixos-25.05";
+  #         #     hash="sha256-cPiGVx8I5qOq++8U/7vUMQ+k/WgYv+2qOY67pD/c/M8=";
+  #         #  };
+  #
+  #
+  #         postFixup = ''
+  #           ln -sv mariadb_config $dev/bin/mysql_config
+  #           ln -sv mariadb $out/lib/mysql
+  #           ln -sv mariadb $dev/include/mysql
+  #           ln -sv mariadb_version.h $dev/include/mariadb/mysql_version.h
+  #           ln -sv libmariadb.pc $dev/lib/pkgconfig/mysqlclient.pc
+  #           install -Dm644 include/ma_config.h $dev/include/mariadb/my_config.h
+  #
+  #           # The dynamically loaded library must be found directly inside /lib
+  #           # This is necessary for nix-ld to work properly
+  #           # https://github.com/nix-community/nix-ld
+  #           ln -sv $out/lib/mysql/*.so $out/lib
+  #           ln -sv $out/lib/mysql/*.so.3 $out/lib
+  #           ln -sv $out/lib/mysql/*.a $out/lib
+  #         '';
+  #       });
+  #     })
+  # ];
+
   # Use same standard in linux and windows
   time.hardwareClockInLocalTime = true;
 
@@ -116,7 +150,9 @@
   programs.nix-ld.libraries = with pkgs;
     [
       # Add any missing dynamic libraries (.so) for unpackaged programs
-
+      # "/home/lucas/Desktop/nixpkgs/pkgs/servers/sql/mariadb"
+      # (pkgs.callPackage /home/lucas/Desktop/nixpkgs/pkgs/servers/sql/mariadb { })
+      # (import /home/lucas/Desktop/nixpkgs/pkgs/servers/sql/mariadb { inherit pkgs; })
       pkgs.libmysqlclient # dependency of mariadb's python package
       pkgs.libmysqlclient.dev
     ];
