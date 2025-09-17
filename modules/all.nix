@@ -13,6 +13,7 @@
     ./gostty.nix
     ./docker.nix
     ./shells.nix
+    ./nix-ld.nix
   ];
 
 }
