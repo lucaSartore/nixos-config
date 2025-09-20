@@ -6,7 +6,7 @@
   programs.bash = {
     shellAliases = {
       cshell-ros-olrc = "nix develop ~/.config/nixos-config/shells/ros-olrc";
-      mathlab-shell = "nix develop ~/.config/nixos-config/shells/matlab";
+      cshell-matlab = "nix develop ~/.config/nixos-config/shells/matlab";
     };
   };
 }

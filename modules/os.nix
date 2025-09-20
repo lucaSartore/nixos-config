@@ -68,6 +68,16 @@
   # Allow unfree packages (better for driver compatibility)
   nixpkgs.config.allowUnfree = true;
 
+  # nixpkgs.overlays = let
+  #   nix-matlab = import (builtins.fetchTarball
+  #     "https://gitlab.com/doronbehar/nix-matlab/-/archive/master/nix-matlab-master.tar.gz");
+  # in [
+  #   nix-matlab.overlay
+  #   (final: prev:
+  #     {
+  #       # Your own overlays...
+  #     })
+  # ];
   # default os packages
   environment.systemPackages = with pkgs; [
     # utility
@@ -86,7 +96,7 @@
     pkgs.discord
     pkgs.kdePackages.partitionmanager
     pkgs.openvpn
-    pkgs.remmina #remote desktop
+    pkgs.remmina # remote desktop
     pkgs.anydesk
     pkgs.zoom-us
 
@@ -96,7 +106,6 @@
     pkgs.libmysqlclient.dev
     # mypkgs.sql
     # mypkgs.sql.dev
-    
 
     # Office and other programs
     pkgs.libreoffice-qt6-fresh
@@ -110,8 +119,8 @@
     pkgs.papirus-icon-theme
     pkgs.darkly
 
-
     pkgs.acl
+    # pkgs.matlab
 
   ];
 

@@ -1,9 +1,9 @@
 { config, pkgs, lib, inputs, ... }:
 
-let
+# let
   # temporary until the sql package is fixed
-  mypkgs = import /home/lucas/Desktop/Test/SqlPackage;
-in
+  # mypkgs = import /home/lucas/Desktop/Test/SqlPackage;
+# in
 {
 
   # Some times if a package dynamic library is imported from python/js ecc
@@ -23,7 +23,7 @@ in
       # pkgs.libmysqlclient.dev
 
       # temporary fix until my commit is accepted
-      mypkgs.sql
-      mypkgs.sql.dev
+      # mypkgs.sql
+      # mypkgs.sql.dev
     ];
 }
