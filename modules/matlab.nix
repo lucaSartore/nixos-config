@@ -1,8 +1,10 @@
 { config, pkgs, lib, inputs, ... }: {
 
   nixpkgs.overlays = let
-    nix-matlab = import (builtins.fetchTarball
-      "https://gitlab.com/doronbehar/nix-matlab/-/archive/master/nix-matlab-master.tar.gz");
+    nix-matlab = import (builtins.fetchTarball {
+      url =
+        "https://gitlab.com/doronbehar/nix-matlab/-/archive/master/nix-matlab-master.tar.gz";
+    });
   in [
     nix-matlab.overlay
     (final: prev:
