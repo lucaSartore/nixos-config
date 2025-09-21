@@ -99,6 +99,7 @@
     pkgs.remmina # remote desktop
     pkgs.anydesk
     pkgs.zoom-us
+    pkgs.obs-studio
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
