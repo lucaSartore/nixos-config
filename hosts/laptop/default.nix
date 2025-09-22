@@ -15,4 +15,6 @@
     pkgs.kdePackages.wacomtablet
     pkgs.maliit-keyboard
   ];
+
+  hardware.bluetooth.enable = true;
 }
