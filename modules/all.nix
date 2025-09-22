@@ -14,7 +14,8 @@
     ./docker.nix
     ./shells.nix
     ./nix-ld.nix
-    ./matlab.nix
+    # ./matlab.nix
+    ./databases.nix
   ];
 
 }
