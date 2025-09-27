@@ -22,7 +22,6 @@ in {
     };
   };
 
-
   environment.systemPackages = with pkgs; [
     # the neovim program
     pkgs.neovim
@@ -37,6 +36,10 @@ in {
     pkgs.python314
     pkgs.unzip
     pkgs.wayclip
+    # pkgs.dotnetCorePackages.sdk_9_0-bin
+    # pkgs.dotnetCorePackages.sdk_8_0-bin
+    pkgs.dotnet-sdk
+    pkgs.omnisharp-roslyn
   ];
 
   # alias

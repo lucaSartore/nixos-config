@@ -90,8 +90,6 @@
     pkgs.vscode
     pkgs.kdePackages.krohnkite
     pkgs.conda
-    pkgs.dotnetCorePackages.sdk_9_0-bin
-    pkgs.dotnetCorePackages.sdk_8_0-bin
     pkgs.postman
     pkgs.discord
     pkgs.kdePackages.partitionmanager
