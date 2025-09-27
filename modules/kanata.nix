@@ -33,7 +33,7 @@ in {
   };
 
   services.kanata.enable = true;
-  services.kanata.keyboards.main-keyboard.configFile = lib.mkDefault "/home/lucas/.config/kanata/kanata.kbd";
+  services.kanata.keyboards.main-keyboard.configFile = lib.mkDefault "/home/lucas/.config/kanata/kanata_full.kbd";
 
   # override the default config so that the service does nto start automatically
   systemd.services.kanata-main-keyboard.wantedBy = lib.mkForce [];
