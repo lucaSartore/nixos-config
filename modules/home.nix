@@ -46,4 +46,5 @@
         "${pkgs.kdePackages.plasma-browser-integration}/etc/chromium/native-messaging-hosts/org.kde.plasma.browser_integration.json";
     };
 
+  xdg.configFile."hypr/hyprland.conf".source = ../assets/hyperland.conf;
 }
