@@ -16,6 +16,7 @@
     ./nix-ld.nix
     # ./matlab.nix
     ./databases.nix
+    ./hyperland.nix
   ];
 
 }
