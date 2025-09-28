@@ -7,7 +7,7 @@
   programs.plasma = {
     enable = true;
     # this is useful when testing to remove all previous settings and just use this configuration's one
-    # overrideConfig = true;
+    overrideConfig = true;
     workspace = {
       colorScheme = "Darkly";
       iconTheme = "Papirus-Dark";
@@ -81,17 +81,11 @@
           };
 
           kwin = {
-              # Manage Krohnkite layouts
-              "KrohnkiteIncrease" = "Meta+I";
-              "KrohnkiteDecrease" = "Meta+Shift+I";
-              "KrohnkiteFocusNext" = "Meta+Shift+\\";
-              "KrohnkiteFocusPrev" = "Meta+\\";
 
               # most useful layouts
-              "KrohnkiteTileLayout" = "Meta+Shift+T";
-              "KrohnkiteTreeColumnLayout" = "Meta+Shift+C";
-              "KrohnkiteBTreeLayout" = "Meta+Shift+B";
-              "KrohnkiteMonocleLayout" = "Meta+Shift+M";
+              "KrohnkiteMonocleLayout" = "Meta+A";
+              "KrohnkiteTreeColumnLayout" = "Meta+S";
+              "KrohnkiteBTreeLayout" = "Meta+D";
 
               # Move in and out float layout
               "KrohnkiteFloatAll" = "Meta+T";
@@ -108,7 +102,7 @@
               "KrohnkiteFocusUp" = "Meta+K";
               "KrohnkiteFocusRight" = "Meta+L";
 
-              # Mve windows around
+              # move windows around
               "KrohnkiteShiftLeft" = "Meta+Shift+H";
               "KrohnkiteShiftDown" = "Meta+Shift+J";
               "KrohnkiteShiftUp" = "Meta+Shift+K";
@@ -119,8 +113,13 @@
               "KrohnkiteGrowHeight" = "Meta+Ctrl+J";
               "KrohnkiteShrinkHeight" = "Meta+Ctrl+K";
               "KrohnkitegrowWidth" = "Meta+Ctrl+L";
-          };
 
+
+              "Switch to Desktop 1" = "Meta+U";
+              "Switch to Desktop 2" = "Meta+I";
+              "Switch to Desktop 3" = "Meta+O";
+
+          };
         };
       };
 }
