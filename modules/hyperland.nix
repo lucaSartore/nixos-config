@@ -3,7 +3,7 @@
 
   environment.systemPackages = [
     # ... other packages
-    pkgs.kitty # required for the default Hyprland config
+    pkgs.wofi
   ];
 
   # Optional, hint Electron apps to use Wayland:
