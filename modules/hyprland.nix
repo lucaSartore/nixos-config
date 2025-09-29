@@ -5,7 +5,7 @@
     # ... other packages
 
     # menu
-    pkgs.wofi
+    pkgs.rofi-wayland
     # packages for screen sharing
     pkgs.pipewire
     pkgs.wireplumber
