@@ -9,6 +9,8 @@
     # packages for screen sharing
     pkgs.pipewire
     pkgs.wireplumber
+    # handel app authentication
+    pkgs.hyprpolkitagent
   ];
 
   # Optional, hint Electron apps to use Wayland:
