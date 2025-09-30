@@ -7,8 +7,9 @@
     # menu
     pkgs.rofi-wayland
     # packages for screen sharing
-    pkgs.pipewire
-    pkgs.wireplumber
+    # adding this brake screen sharing in KDE... uncomment them when fully switch to hyperland
+    # pkgs.pipewire
+    # pkgs.wireplumber
     # handel app authentication
     pkgs.hyprpolkitagent
   ];
