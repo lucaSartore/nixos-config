@@ -50,4 +50,5 @@
     };
 
   xdg.configFile."hypr/hyprland.conf".source = ../assets/hyprland.conf;
+  xdg.configFile."rofi/config.rasi".source = ../assets/config.rasi;
 }
