@@ -14,10 +14,13 @@
     enable = true;
     userName = "Luca Sartore";
     userEmail = "lucasartore02@gmail.com";
-    extraConfig.credential.helper = "manager";
-    extraConfig.credential."https://github.com".username = "lucaSartore";
-    extraConfig.credential.credentialStore = "cache";
-    extraConfig = { safe.directory = "/etc/nixos"; };
+    extraConfig = { 
+      credential.helper = "manager";
+      credential."https://github.com".username = "lucaSartore";
+      credential.credentialStore = "cache";
+      safe.directory = "/etc/nixos"; 
+      pull.rebase = true;
+    };
   };
 
   xdg.mimeApps = {
