@@ -51,4 +51,8 @@
 
   xdg.configFile."hypr/hyprland.conf".source = ../assets/hyprland.conf;
   xdg.configFile."rofi/config.rasi".source = ../assets/config.rasi;
+  xdg.configFile."rofi/themes" = {
+    source = ../assets/submodules/rofi_themes_collection;
+    recursive = true;
+  };
 }
