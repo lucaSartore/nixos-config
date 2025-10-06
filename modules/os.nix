@@ -87,7 +87,7 @@
     pkgs.google-chrome
     pkgs.home-manager
     pkgs.fd
-    pkgs.vscode
+    pkgs.vscode.fhs
     pkgs.kdePackages.krohnkite
     pkgs.conda
     pkgs.postman
