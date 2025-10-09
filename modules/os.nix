@@ -98,6 +98,7 @@
     pkgs.anydesk
     pkgs.zoom-us
     pkgs.obs-studio
+    pkgs.devcontainer
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
