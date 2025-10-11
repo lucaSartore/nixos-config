@@ -46,7 +46,11 @@
             echo "✅ Neovim config already present."
           fi
 
+          echo "🦀 Setting up Rustup for tool building"
+          rustup default stable
+
           echo "✨ Environment ready. Run 'nvim' to start!"
+
         '';
       };
     };
