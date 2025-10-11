@@ -6,6 +6,7 @@
 
   environment.systemPackages = with pkgs; [
     docker-compose 
+    devpod-desktop
   ];
 
   virtualisation.docker = {
