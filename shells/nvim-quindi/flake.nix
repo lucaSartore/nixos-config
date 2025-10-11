@@ -49,12 +49,13 @@
             echo '{"go": false, "nix": false, "python": true, "lua": false, "rust": false, "javascript": true, "csharp": true, "yml": true}' \
               >> "$CONFIG_DIR/lua/language_tools/enabled_languages.json"
 
+            # rustup is necessary for many of the tools built in neovim
+            echo "🦀 Setting up Rustup for tool building"
+            rustup default stable
           else
             echo "✅ Neovim config already present."
           fi
 
-          echo "🦀 Setting up Rustup for tool building"
-          rustup default stable
 
           alias nvim="nvim -u $CONFIG_DIR/init.lua"
 
