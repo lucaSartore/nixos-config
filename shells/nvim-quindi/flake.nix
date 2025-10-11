@@ -16,6 +16,15 @@
           git
           lazygit
           ripgrep
+          rustup
+          ripgrep
+          lazygit
+          gcc
+          luajitPackages.luarocks_bootstrap
+          go
+          python314
+          unzip
+          # wayclip
           # Add more tools as needed
         ];
 
@@ -29,6 +38,10 @@
           if [ ! -d "$CONFIG_DIR" ]; then
             echo "📦 Cloning your Neovim config..."
             git clone https://github.com/lucaSartore/nvim.git "$CONFIG_DIR"
+
+            echo '{"go": false, "nix": false, "python": true, "lua": false, "rust": false, "javascript": true, "csharp": true, "yml": true}' \
+              >> "$CONFIG_DIR/language_tools/enabled_languages.json"
+
           else
             echo "✅ Neovim config already present."
           fi
