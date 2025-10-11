@@ -1,3 +1,4 @@
+# to run: nix develop github:lucaSartore/nixos-config?dir=shells/nvim-quindi --refresh
 {
   description = "Portable Neovim environment";
 
