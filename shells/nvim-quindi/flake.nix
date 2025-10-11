@@ -24,8 +24,10 @@
           go
           python314
           unzip
+          omnisharp-roslyn
           # wayclip
           # Add more tools as needed
+
         ];
 
         shellHook = ''
