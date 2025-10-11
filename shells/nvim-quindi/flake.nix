@@ -35,7 +35,7 @@
           echo "🔧 Setting up your Neovim environment..."
 
           
-          CONFIG_DIR="$HOME/.config/nvim-luca-sartore"
+          CONFIG_DIR="$HOME/.config/nvim"
           TERM="xterm-256color"
 
           # necessary to enable the osc52 clipboard
@@ -56,8 +56,6 @@
             echo "✅ Neovim config already present."
           fi
 
-
-          alias nvim="nvim -u $CONFIG_DIR/init.lua"
 
           echo "✨ Environment ready. Run 'nvim' to start!"
 
