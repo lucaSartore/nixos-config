@@ -55,4 +55,5 @@
     source = ../assets/submodules/rofi_themes_collection;
     recursive = true;
   };
+  xdg.configFile."ghostty/config".source = ../assets/ghostty/config;
 }
