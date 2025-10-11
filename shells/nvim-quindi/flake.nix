@@ -40,7 +40,7 @@
             git clone https://github.com/lucaSartore/nvim.git "$CONFIG_DIR"
 
             echo '{"go": false, "nix": false, "python": true, "lua": false, "rust": false, "javascript": true, "csharp": true, "yml": true}' \
-              >> "$CONFIG_DIR/language_tools/enabled_languages.json"
+              >> "$CONFIG_DIR/lua/language_tools/enabled_languages.json"
 
           else
             echo "✅ Neovim config already present."
