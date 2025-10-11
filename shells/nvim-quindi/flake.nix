@@ -33,8 +33,12 @@
         shellHook = ''
           echo "🔧 Setting up your Neovim environment..."
 
-          CONFIG_DIR="$HOME/.config/nvim"
+          
+          CONFIG_DIR="$HOME/.config/nvim-luca-sartore"
           TERM="xterm-256color"
+
+          # necessary to enable the osc52 clipboard
+          VIM_SSH_CONNECTION="true"
 
           # --- Clone Neovim config if missing ---
           if [ ! -d "$CONFIG_DIR" ]; then
@@ -50,6 +54,8 @@
 
           echo "🦀 Setting up Rustup for tool building"
           rustup default stable
+
+          alias nvim="nvim -u $CONFIG_DIR/init.lua"
 
           echo "✨ Environment ready. Run 'nvim' to start!"
 
