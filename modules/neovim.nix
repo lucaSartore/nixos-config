@@ -40,6 +40,7 @@ in {
     # pkgs.dotnetCorePackages.sdk_8_0-bin
     pkgs.dotnet-sdk
     pkgs.omnisharp-roslyn
+    pkgs.csharpier
   ];
 
   # alias

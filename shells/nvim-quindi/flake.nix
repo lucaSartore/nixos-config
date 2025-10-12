@@ -26,6 +26,7 @@
           python314
           unzip
           omnisharp-roslyn
+          csharpier
           # wayclip
           # Add more tools as needed
 
