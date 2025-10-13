@@ -36,8 +36,10 @@
           echo "🔧 Setting up your Neovim environment..."
 
           
-          CONFIG_DIR="$HOME/.config/nvim"
-          TERM="xterm-256color"
+          # using a special name so that I can avoid overriding local environments
+          export NVIM_APPNAME="nvim-luca-sartore"
+          export TERM="xterm-256color"
+          CONFIG_DIR="$HOME/.config/$NVIM_APPNAME"
 
           # necessary to enable the osc52 clipboard
           VIM_SSH_CONNECTION="true"
@@ -47,8 +49,16 @@
             echo "📦 Cloning your Neovim config..."
             git clone https://github.com/lucaSartore/nvim.git "$CONFIG_DIR"
 
-            echo '{"go": false, "nix": false, "python": true, "lua": false, "rust": false, "javascript": true, "csharp": true, "yml": true}' \
-              >> "$CONFIG_DIR/lua/language_tools/enabled_languages.json"
+            echo '{
+              "go": false,
+              "nix": false,
+              "python": true,
+              "lua": false,
+              "rust": false,
+              "javascript": true,
+              "csharp": true,
+              "yml": true
+            }' >> "$CONFIG_DIR/lua/language_tools/enabled_languages.json"
 
             # rustup is necessary for many of the tools built in neovim
             echo "🦀 Setting up Rustup for tool building"
