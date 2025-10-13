@@ -35,14 +35,14 @@
         shellHook = ''
           echo "🔧 Setting up your Neovim environment..."
 
-          
           # using a special name so that I can avoid overriding local environments
           export NVIM_APPNAME="nvim-luca-sartore"
-          export TERM="xterm-256color"
           CONFIG_DIR="$HOME/.config/$NVIM_APPNAME"
+          # fix for the ghostty terminal over SSH
+          export TERM="xterm-256color"
 
-          # necessary to enable the osc52 clipboard
-          VIM_SSH_CONNECTION="true"
+          # necessary to enable the osc52 clipboard (to copy and paste over ssh)
+          export NVIM_ENABLE_OSC52="true"
 
           # --- Clone Neovim config if missing ---
           if [ ! -d "$CONFIG_DIR" ]; then
