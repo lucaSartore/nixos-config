@@ -64,7 +64,8 @@
             echo "🦀 Setting up Rustup for tool building"
             rustup default stable
           else
-            echo "✅ Neovim config already present."
+            echo "✅ Neovim config already present... Updating it"
+            (cd $CONFIG_DIR; git pull)
           fi
 
 
