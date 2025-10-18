@@ -100,6 +100,7 @@
     pkgs.zoom-us
     pkgs.obs-studio
     pkgs.devcontainer
+    pkgs.texliveMedium # latex build support
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
