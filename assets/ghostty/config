@@ -1,2 +1,6 @@
 clipboard-read = allow
 clipboard-write = allow
+
+# using correct terminal settings in SSH machine
+shell-integration-features = ssh-terminfo
+shell-integration-features = ssh-env
