@@ -1,4 +1,11 @@
 # to run: nix develop github:lucaSartore/nixos-config?dir=shells/nvim-quindi --refresh
+
+# to fix the issues related to ghostty
+# infocmp -x xterm-ghostty | ssh YOUR-SERVER -- tic -x -
+# full ref: https://ghostty.org/docs/help/terminfo
+# the error:
+#  > older tic versions may treat the description field as an alias
+# can be ignored
 {
   description = "Portable Neovim environment";
 
@@ -38,8 +45,10 @@
           # using a special name so that I can avoid overriding local environments
           export NVIM_APPNAME="nvim-luca-sartore"
           CONFIG_DIR="$HOME/.config/$NVIM_APPNAME"
+
           # fix for the ghostty terminal over SSH
-          export TERM="xterm-256color"
+          # not usefull if you run the command above (copy
+          # export TERM="xterm-256color"
 
           # necessary to enable the osc52 clipboard (to copy and paste over ssh)
           export NVIM_ENABLE_OSC52="true"
