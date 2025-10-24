@@ -48,6 +48,7 @@
                   python312Packages.tsid
                   python312Packages.coal
                   python312Packages.meshcat
+                  python312Packages.ipykernel
                   # this package is custom built, as is not present in the nix store
                   adam-robotics
 
