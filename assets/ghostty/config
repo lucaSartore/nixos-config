@@ -1,6 +1,8 @@
 clipboard-read = allow
 clipboard-write = allow
 
+gtk-single-instance = true
+
 # using correct terminal settings in SSH machine
 # shell-integration-features = ssh-terminfo
 # shell-integration-features = ssh-env
