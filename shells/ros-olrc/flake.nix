@@ -49,6 +49,7 @@
                   python312Packages.coal
                   python312Packages.meshcat
                   python312Packages.ipykernel
+                  python312Packages.termcolor
                   # this package is custom built, as is not present in the nix store
                   adam-robotics
 
