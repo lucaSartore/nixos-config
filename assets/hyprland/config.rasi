@@ -3,7 +3,7 @@
 configuration {
 
 	show-icons: true;
-	matching: "fuzzy";
+	// matching: "fuzzy";
   timeout {
       action: "kb-cancel";
       delay:  0;
