@@ -49,8 +49,8 @@
         "${pkgs.kdePackages.plasma-browser-integration}/etc/chromium/native-messaging-hosts/org.kde.plasma.browser_integration.json";
     };
 
-  xdg.configFile."hypr/hyprland.conf".source = ../assets/hyprland.conf;
-  xdg.configFile."rofi/config.rasi".source = ../assets/config.rasi;
+  xdg.configFile."hypr/hyprland.conf".source = ../assets/hyprland/hyprland.conf;
+  xdg.configFile."rofi/config.rasi".source = ../assets/hyprland/config.rasi;
   xdg.configFile."rofi/themes" = {
     source = ../assets/submodules/rofi_themes_collection;
     recursive = true;
