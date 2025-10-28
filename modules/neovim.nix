@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, pkgs-unstable, ... }:
 
 let
   cloneScript = pkgs.writeShellScript "setup-nvim-repo" ''
@@ -40,7 +40,8 @@ in {
     # pkgs.dotnetCorePackages.sdk_8_0-bin
     pkgs.dotnet-sdk
     pkgs.omnisharp-roslyn
-    pkgs.csharpier
+    
+    pkgs-unstable.csharpier
   ];
 
   # alias
