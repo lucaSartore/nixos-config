@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, ... }: {
+{ config, pkgs, inputs, lib, pkgs-unstable, ... }: {
   programs.hyprland.enable = true; # enable Hyprland
 
   # kwallet: the kde software to store passwords
@@ -6,6 +6,13 @@
     enable = true;
     package = pkgs.kdePackages.kwallet-pam;
   };
+
+  # font for the OS
+  fonts.packages = [
+    pkgs.jetbrains-mono
+    pkgs.nerd-fonts.jetbrains-mono
+    pkgs.twitter-color-emoji
+  ];
 
   environment.systemPackages = with pkgs; [
     # ... other packages
@@ -19,6 +26,9 @@
 
     # handel app request fore elevated permissions
     hyprpolkitagent
+
+    # status bar
+    pkgs-unstable.ashell
 
   ];
 

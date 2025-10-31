@@ -1,0 +1,77 @@
+[appearance]
+scale_factor = 1.3
+workspace_colors = [ "#4a9edf" ]
+font_name = "JetBrains Mono"
+
+[modules]
+left = ["Workspaces"]
+center = ["Tray"]
+# right = ["SystemInfo", ["Tray", "Privacy", "Settings"]]
+right = ["SystemInfo",["Clock","Settings"]]
+
+[workspaces]
+visibility_mode = "All"
+workspace_names = ["📝","🔍","💬","📁","5","6","7","8","9","0"]
+enable_workspace_filling = false
+
+[system_info]
+indicators = [
+  "Cpu",
+  "Memory",
+  # "DownloadSpeed",
+  # "UploadSpeed",
+  "Temperature",
+]
+
+[system_info.temperature]
+# sensor = "coretemp Package id 0"
+sensor = "k10temp Tctl"
+warn_threshold = 80
+alert_threshold = 80
+
+[system_info.cpu]
+warn_threshold = 90
+alert_threshold = 90
+
+[system_info.memory]
+warn_threshold = 90
+alert_threshold = 90
+
+[system_info.disk]
+warn_threshold = 80
+alert_threshold = 90
+
+[appearance.background_color]
+base = "#1e222a"       
+strong = "#2c323c"
+weak = "#181a1f"
+text = "#abb2bf"
+
+[appearance.primary_color]
+base = "#61afef"
+strong = "#73b8f1"
+weak = "#4a9edf"
+text = "#ffffff"
+
+[appearance.secondary_color]
+base = "#3e4451"
+strong = "#4b5263"
+weak = "#2f343f"
+text = "#dcdfe4"
+
+[appearance.success_color]
+base = "#98c379"
+strong = "#a8d08d"
+weak = "#7faa61"
+text = "#1e222a"
+
+[appearance.danger_color]
+base = "#e06c75"
+strong = "#ff7a85"
+weak = "#c95c65"
+text = "#1e222a"
+
+[appearance.text_color]
+base = "#abb2bf"
+strong = "#dcdfe4"
+weak = "#7f848e"
