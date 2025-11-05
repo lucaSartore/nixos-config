@@ -1,11 +1,11 @@
 [appearance]
-scale_factor = 1.3
+scale_factor = 1.2
 workspace_colors = [ "#4a9edf" ]
 font_name = "JetBrains Mono"
 
 [modules]
-left = ["Workspaces"]
-center = ["Tray"]
+left = ["NetworkManager", "Btop"]
+center = ["Workspaces"]
 # right = ["SystemInfo", ["Tray", "Privacy", "Settings"]]
 right = ["SystemInfo",["Clock","Settings"]]
 
@@ -18,8 +18,6 @@ enable_workspace_filling = false
 indicators = [
   "Cpu",
   "Memory",
-  # "DownloadSpeed",
-  # "UploadSpeed",
   "Temperature",
 ]
 
@@ -75,3 +73,14 @@ text = "#1e222a"
 base = "#abb2bf"
 strong = "#dcdfe4"
 weak = "#7f848e"
+
+
+[[CustomModule]]
+name = "NetworkManager"
+icon = "🛜"
+command = "calias-network-manager"
+
+[[CustomModule]]
+name = "Btop"
+icon = "📊"
+command = "calias-btop-shell"

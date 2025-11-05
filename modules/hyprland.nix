@@ -15,10 +15,9 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # ... other packages
-
     # menu
     rofi-wayland
+
     # packages for screen sharing
     # adding this brake screen sharing in KDE... uncomment them when fully switch to hyperland
     # pkgs.pipewire
@@ -30,7 +29,20 @@
     # status bar
     pkgs-unstable.ashell
 
+    # custom alias that run a shell with the network manager tui
+    (pkgs.writeShellScriptBin "calias-network-manager" ''
+        #!/bin/sh
+        ghostty --class=float.custom -e "sleep 0.1 && nmtui"
+      '')
+    # custom alias that run a b-top shell
+    (pkgs.writeShellScriptBin "calias-btop-shell" ''
+        #!/bin/sh
+        ghostty --class=float.custom -e "sleep 0.1 && btop"
+      '')
+
   ];
+
+
 
   # Optional, hint Electron apps to use Wayland:
   # need to try this again in the future... currently

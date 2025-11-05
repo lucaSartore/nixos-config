@@ -102,6 +102,7 @@
     pkgs.obs-studio
     pkgs.devcontainer
     pkgs.texliveMedium # latex build support
+    pkgs.btop
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
