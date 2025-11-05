@@ -49,6 +49,13 @@
         "${pkgs.kdePackages.plasma-browser-integration}/etc/chromium/native-messaging-hosts/org.kde.plasma.browser_integration.json";
     };
 
+  home.file.bashrc = { # call it whatever you want its just a string id (bashrc)
+    target = ".bashrc"; # or path to bashrc e.g. ".bashrc"
+    text = ''
+      eval "$(atuin init bash)"
+    '';
+  };
+
   xdg.configFile."hypr/hyprland.conf".source = ../assets/hyprland/hyprland.conf;
   xdg.configFile."rofi/config.rasi".source = ../assets/hyprland/config.rasi;
   xdg.configFile."ashell/config.toml".source = ../assets/hyprland/ashell.toml;
