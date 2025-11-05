@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ../../modules/cuda.nix 
+  ];
 
   networking.hostName = "desktop-luca";
 
@@ -50,7 +53,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-
   # using the simpler version in the desktop, as all complex remappings are handled by the glove80 firmware
-  services.kanata.keyboards.main-keyboard.configFile = "/home/lucas/.config/kanata/kanata_small.kbd";
+  services.kanata.keyboards.main-keyboard.configFile =
+    "/home/lucas/.config/kanata/kanata_small.kbd";
 }
