@@ -38,19 +38,17 @@
                   noetic.gazebo-msgs
                   noetic.control-toolbox
                   noetic.controller-manager
+
+                  noetic.rqt
+                  # noetic.rqt-common-plugins
+                  noetic.turtlesim
+
                   # example of other ros components that can be install
                   # source: https://github.com/lopsided98/nix-ros-overlay/tree/develop/examples
                   noetic.rosbash
                 ];
               })
           ];
-
-          shellHook = ''
-            abs_path="$(realpath "$PWD/..")"
-            export PYTHONPATH="$abs_path:$PYTHONPATH"
-            echo -e "\033[0;31mAdded $abs_path to PYTHONPATH\033[0m"
-            echo -e "\033[0;31mIf this is not the folder containing the \"orc\" repo, the code will not work\033[0m"
-          '';
 
         };
       });
