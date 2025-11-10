@@ -52,7 +52,7 @@
   home.file.bashrc = { # call it whatever you want its just a string id (bashrc)
     target = ".bashrc"; # or path to bashrc e.g. ".bashrc"
     text = ''
-      eval "$(atuin init bash)"
+      # eval "$(atuin init bash)"
     '';
   };
 
