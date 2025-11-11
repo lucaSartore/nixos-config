@@ -59,7 +59,7 @@
       # scale of fonts/ui elements
       "kwinrc"."Xwayland"."Scale" = 1.5;
       # 3 virtual desktop in one single row
-      "kwinrc"."Desktops"."Number" = 3;
+      "kwinrc"."Desktops"."Number" = 6;
       "kwinrc"."Desktops"."Rows" = 1;
       # Speed up animations compared to normal
       "kdeglobals"."KDE"."AnimationDurationFactor" = 0.35355339059327373;
@@ -92,7 +92,7 @@
 
               # Window management
               "Expose" = "Meta+,";
-              "Window Close" = "Meta+Q";
+              "Window Close" = "Meta+ESCAPE";
               "Window Minimize" = "Meta+M";
               "Window Fullscreen" = "Meta+F";
 
@@ -115,9 +115,13 @@
               "KrohnkitegrowWidth" = "Meta+Ctrl+L";
 
 
-              "Switch to Desktop 1" = "Meta+U";
-              "Switch to Desktop 2" = "Meta+I";
-              "Switch to Desktop 3" = "Meta+O";
+              "Switch to Desktop 1" = "Meta+1";
+              "Switch to Desktop 2" = "Meta+2";
+              "Switch to Desktop 3" = "Meta+3";
+              "Switch to Desktop 4" = "Meta+4";
+              "Switch to Desktop 5" = "Meta+5";
+              "Switch to Desktop 6" = "Meta+6";
+
 
           };
         };
