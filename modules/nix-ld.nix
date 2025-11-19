@@ -2,7 +2,7 @@
 
 let
   # temporary until the sql package is fixed
-  mypkgs = import /home/lucas/Desktop/Test/SqlPackage;
+  # mypkgs = import /home/lucas/Desktop/Test/SqlPackage;
 in
 {
 
@@ -23,7 +23,7 @@ in
       # pkgs.libmysqlclient.dev
 
       # temporary fix until my commit is accepted
-      mypkgs.sql
-      mypkgs.sql.dev
+      # mypkgs.sql
+      # mypkgs.sql.dev
     ];
 }
