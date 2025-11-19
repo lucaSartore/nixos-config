@@ -1,3 +1,6 @@
 [submodule "assets/submodules/rofi_themes_collection"]
 	path = assets/submodules/rofi_themes_collection
 	url = https://github.com/newmanls/rofi-themes-collection.git
+[submodule "assets/submodules/kanata_config"]
+	path = assets/submodules/kanata_config
+	url = git@github.com:lucaSartore/IT-ProgrammingLayout.git
