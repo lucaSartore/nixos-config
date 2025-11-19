@@ -103,6 +103,8 @@
     pkgs.devcontainer
     pkgs.texliveMedium # latex build support
     pkgs.btop
+    pkgs.wget
+    pkgs.inetutils # includes telnet
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
