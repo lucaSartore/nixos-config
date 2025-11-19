@@ -64,4 +64,5 @@
     recursive = true;
   };
   xdg.configFile."ghostty/config".source = ../assets/ghostty/config;
+  xdg.configFile."kanata/kanata.kbd".source = ../assets/submodules/kanata_config/kanata.kbd;
 }
