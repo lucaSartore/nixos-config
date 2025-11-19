@@ -19,6 +19,7 @@
       credential."https://github.com".username = "lucaSartore";
       credential.credentialStore = "cache";
       safe.directory = "/etc/nixos"; 
+      pull.rebase = false;
     };
   };
 
