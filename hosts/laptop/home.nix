@@ -6,6 +6,7 @@
   programs.plasma = {
 
     # laptop specific touchpads input
+    # list inputs: cat /proc/bus/input/devices
     input = {
       touchpads = [{
         disableWhileTyping = true;
