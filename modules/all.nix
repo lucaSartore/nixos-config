@@ -17,6 +17,7 @@
     # ./matlab.nix
     ./databases.nix
     ./hyprland.nix
+    ./cpp.nix
   ];
 
 }
