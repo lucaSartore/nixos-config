@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     # builder
     cmake
+    gnumake
 
     # debugger
     # llvm.lldb
