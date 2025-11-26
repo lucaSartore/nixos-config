@@ -66,7 +66,8 @@
               "rust": false,
               "javascript": true,
               "csharp": true,
-              "yml": true
+              "yml": true,
+              "cpp": false
             }' >> "$CONFIG_DIR/lua/language_tools/enabled_languages.json"
 
             # rustup is necessary for many of the tools built in neovim
