@@ -49,6 +49,9 @@
         "${pkgs.kdePackages.plasma-browser-integration}/etc/chromium/native-messaging-hosts/org.kde.plasma.browser_integration.json";
     };
 
+
+  home.file.".omnisharp/omnishapr.json" = ../assert/omnisharp.json;
+
   home.file.bashrc = { # call it whatever you want its just a string id (bashrc)
     target = ".bashrc"; # or path to bashrc e.g. ".bashrc"
     text = ''
