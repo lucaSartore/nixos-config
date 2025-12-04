@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/cuda.nix 
+    ../../modules/steam.nix
   ];
 
   networking.hostName = "desktop-luca";
