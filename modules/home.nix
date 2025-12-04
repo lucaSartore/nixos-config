@@ -50,7 +50,7 @@
     };
 
 
-  home.file.".omnisharp/omnishapr.json" = ../assert/omnisharp.json;
+  home.file.".omnisharp/omnisharp.json".source = ../assets/omnisharp.json;
 
   home.file.bashrc = { # call it whatever you want its just a string id (bashrc)
     target = ".bashrc"; # or path to bashrc e.g. ".bashrc"

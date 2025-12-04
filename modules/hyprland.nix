@@ -16,7 +16,7 @@
 
   environment.systemPackages = with pkgs; [
     # menu
-    rofi-wayland
+    rofi
 
     # packages for screen sharing
     # adding this brake screen sharing in KDE... uncomment them when fully switch to hyperland

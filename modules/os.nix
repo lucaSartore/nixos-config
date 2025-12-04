@@ -119,7 +119,7 @@
     pkgs.rnote
 
     # for browser integration
-    pkgs.libsForQt5.plasma-browser-integration
+    pkgs.kdePackages.plasma-browser-integration
 
     # themes
     pkgs.papirus-icon-theme
