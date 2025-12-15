@@ -11,6 +11,8 @@
 
   virtualisation.docker = {
     enable = true;
+    # do not start on boot. prefer starting it manually if needed
+    enableOnBoot = false;
     # Set up resource limits
     daemon.settings = {
       experimental = true;
