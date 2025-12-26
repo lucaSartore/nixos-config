@@ -126,6 +126,7 @@
     pkgs.darkly
 
     pkgs.acl
+    pkgs.xhost
     # pkgs.matlab
 
   ];
