@@ -101,7 +101,8 @@
     pkgs.zoom-us
     pkgs.obs-studio
     pkgs.devcontainer
-    pkgs.texliveMedium # latex build support
+    pkgs.texliveFull # latex build support
+    pkgs.texlivePackages.ieeetran
     pkgs.btop
     pkgs.wget
     pkgs.inetutils # includes telnet
