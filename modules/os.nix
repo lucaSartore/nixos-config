@@ -106,6 +106,7 @@
     pkgs.btop
     pkgs.wget
     pkgs.inetutils # includes telnet
+    pkgs.jetbrains.clion
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
