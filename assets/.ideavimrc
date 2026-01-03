@@ -20,8 +20,9 @@ set whichwrap=b,s,h,l
 
 "" --- Key Remaps ---
 
-" jj to escape
-inoremap jj <Esc>
+
+" ctr+s to save
+inoremap <C-s> :w
 
 " Fast vertical movement
 nnoremap <C-j> 10j
