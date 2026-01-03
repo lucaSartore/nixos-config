@@ -1,0 +1,54 @@
+"" --- Settings ---
+let mapleader = " "
+set surrond
+set sneak
+set multiple-cursors
+set commentary
+set argtextobj
+set ReplaceWithRegister
+set highlightedyank
+set clipboard+=unnamed
+
+" Smart relative lines (switches to absolute in insert mode)
+set relativenumber
+set number
+autocmd InsertEnter * set norelativenumber
+autocmd InsertLeave * set relativenumber
+
+" Whichwrap (allow h/l to cross line boundaries)
+set whichwrap=b,s,h,l
+
+"" --- Key Remaps ---
+
+" jj to escape
+inoremap jj <Esc>
+
+" Fast vertical movement
+nnoremap <C-j> 10j
+nnoremap <C-k> 10k
+
+" Custom 'around block' logic (dab, yab, gcab)
+" Note: IdeaVim handles multi-key sequences in 'after' logic slightly differently
+nnoremap dab ]}V%bd
+nnoremap yab ]}V%by
+nnoremap gcab ]}V%bgc
+vnoremap ab ]}<Esc>V%b
+
+"" --- IDE Actions (The VS Code 'commands' equivalent) ---
+
+" Next/Previous Error (Diagnostic)
+nnoremap ]d :action GotoNextError<CR>
+nnoremap [d :action GotoPreviousError<CR>
+
+" Search Files (Quick Open)
+nnoremap <leader>sf :action GotoFile<CR>
+
+" Spelling Suggestions
+nnoremap <leader>ss :action RenameElement<CR> 
+" Note: JetBrains usually combines spelling with 'Show Intention Actions'
+" If RenameElement isn't what you want, try: :action ShowIntentionActions<CR>
+
+"" --- Plugins & Extensions ---
+" Enable CamelCaseMotion (Requires specific plugin behavior)
+" In IdeaVim, we often use the built-in 'matchit' or 'camelcasemotion'
+set camelcasemotion

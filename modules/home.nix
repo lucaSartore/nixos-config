@@ -59,6 +59,8 @@
     '';
   };
 
+  home.file.".ideavimrc".source = ../assets/.ideavimrc;
+
   xdg.configFile."hypr/hyprland.conf".source = ../assets/hyprland/hyprland.conf;
   xdg.configFile."rofi/config.rasi".source = ../assets/hyprland/config.rasi;
   xdg.configFile."ashell/config.toml".source = ../assets/hyprland/ashell.toml;
