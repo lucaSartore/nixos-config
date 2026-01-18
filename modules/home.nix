@@ -2,6 +2,7 @@
 
   imports = [ 
     ./plasma_manager.nix
+    ./hyprpanel.nix
   ];
 
   home.username = "lucas";
@@ -63,7 +64,6 @@
 
   xdg.configFile."hypr/hyprland.conf".source = ../assets/hyprland/hyprland.conf;
   xdg.configFile."rofi/config.rasi".source = ../assets/hyprland/config.rasi;
-  xdg.configFile."ashell/config.toml".source = ../assets/hyprland/ashell.toml;
   xdg.configFile."rofi/themes" = {
     source = ../assets/submodules/rofi_themes_collection;
     recursive = true;

@@ -26,8 +26,6 @@
     # handel app request fore elevated permissions
     hyprpolkitagent
 
-    # status bar
-    pkgs-unstable.ashell
 
     # custom alias that run a shell with the network manager tui
     (pkgs.writeShellScriptBin "calias-network-manager" ''
