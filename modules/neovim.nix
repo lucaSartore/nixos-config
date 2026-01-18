@@ -33,7 +33,10 @@ in {
     pkgs.luajitPackages.luarocks_bootstrap
     pkgs.go
     pkgs.nodejs_24
-    pkgs.python314
+    (pkgs.python3.withPackages (ps: [ 
+      ps.numpy
+      ps.matplotlib
+    ]))
     pkgs.unzip
     pkgs.wayclip
     # pkgs.dotnetCorePackages.sdk_9_0-bin
