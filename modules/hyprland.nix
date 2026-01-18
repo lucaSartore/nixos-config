@@ -26,6 +26,8 @@
     # handel app request fore elevated permissions
     hyprpolkitagent
 
+    # used for blue-light
+    hyprsunset
 
     # custom alias that run a shell with the network manager tui
     (pkgs.writeShellScriptBin "calias-network-manager" ''
