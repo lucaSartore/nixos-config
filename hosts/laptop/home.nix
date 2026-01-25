@@ -1,7 +1,10 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports = [ ../../modules/home.nix ];
+  imports = [ 
+    ../../modules/home.nix
+    ../../modules/hyprpanel.laptop.nix
+  ];
 
   programs.plasma = {
 

@@ -10,41 +10,6 @@
       # Configure bar layouts for monitors.
       # See 'https://hyprpanel.com/configuration/panel.html'.
       # Default: null
-      bar.layouts = {
-        "*" = {
-          left = [ 
-            "dashboard"
-            "workspaces"
-
-            "separator" #########
-
-            "ram"
-            "cpu"
-            "cputemp"
-            "netstat"
-            ];
-          middle = [ ];
-          # right = [ "cpu" "volume" "systray" "notifications" ];
-          right = [
-            "media"
-            "clock"
-
-            "separator" #########
-
-            "volume"
-            "network"
-            # "bluetooth"
-            # "battery"
-             
-            "separator" #########
-
-            "hyprsunset"
-            "systray"
-            "notifications"
-            "power"
-          ];
-        };
-      };
 
       bar.launcher.autoDetectIcon = true;
       bar.workspaces.show_icons = true;
