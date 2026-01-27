@@ -7,6 +7,6 @@
     pkgs.atuin # cool bash history
   ];
 
-  # services.atuin.enable = true;
+  services.atuin.enable = true;
 
 }

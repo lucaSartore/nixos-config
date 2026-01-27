@@ -53,10 +53,10 @@
 
   home.file.".omnisharp/omnisharp.json".source = ../assets/omnisharp.json;
 
-  home.file.bashrc = { # call it whatever you want its just a string id (bashrc)
-    target = ".bashrc"; # or path to bashrc e.g. ".bashrc"
+  home.file.bashrc = {
+    target = ".bashrc";
     text = ''
-      # eval "$(atuin init bash)"
+      eval "$(atuin init bash --disable-up-arrow)"
     '';
   };
 
