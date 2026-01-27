@@ -48,7 +48,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.lucas = ./hosts/desktop/home.nix;
               home-manager.sharedModules =
-                [ plasma-manager.homeManagerModules.plasma-manager ];
+                [ plasma-manager.homeModules.plasma-manager ];
               home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; };
             }
             ./modules/all.nix
@@ -66,7 +66,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.lucas = ./hosts/laptop/home.nix;
               home-manager.sharedModules =
-                [ plasma-manager.homeManagerModules.plasma-manager ];
+                [ plasma-manager.homeModules.plasma-manager ];
               home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; };
             }
             ./modules/all.nix
@@ -84,7 +84,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.lucas = ./hosts/laptop-quindi/home.nix;
               home-manager.sharedModules =
-                [ plasma-manager.homeManagerModules.plasma-manager ];
+                [ plasma-manager.homeModules.plasma-manager ];
               home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; };
             }
             ./modules/all.nix

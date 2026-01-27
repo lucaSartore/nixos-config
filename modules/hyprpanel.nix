@@ -315,6 +315,7 @@
       "theme.bar.buttons.modules.power.icon" = "#e06c75";
       "theme.bar.buttons.modules.storage.text" = "#e06c75";
       "theme.bar.buttons.modules.cpu.background" = "#21252b";
+      "theme.bar.buttons.modules.cpuTemp.background" = "#21252b";
       "theme.bar.menus.menu.power.border.color" = "#4b5263";
       "theme.bar.buttons.network.icon_background" = "#caa6f7";
       "theme.bar.buttons.modules.power.icon_background" = "#e06c75";
@@ -322,6 +323,7 @@
       "theme.bar.menus.menu.power.buttons.restart.icon_background" = "#d19a66";
       "theme.bar.menus.menu.power.buttons.restart.icon" = "#282c34";
       "theme.bar.buttons.modules.cpu.icon" = "#e06c75";
+      "theme.bar.buttons.modules.cpuTemp.icon" = "#61afef";
       "theme.bar.buttons.battery.icon_background" = "#e5c07b";
       "theme.bar.buttons.modules.kbLayout.icon_background" = "#56b6c2";
       "theme.bar.buttons.modules.weather.text" = "#61afef";
@@ -355,6 +357,7 @@
       "theme.bar.menus.menu.power.buttons.restart.background" = "#21252b";
       "theme.bar.buttons.modules.updates.icon" = "#c678dd";
       "theme.bar.buttons.modules.cpu.text" = "#e06c75";
+      "theme.bar.buttons.modules.cpuTemp.text" = "#61afef";
       "theme.bar.buttons.modules.netstat.icon_background" = "#98c379";
       "theme.bar.buttons.modules.kbLayout.text" = "#56b6c2";
       "theme.bar.buttons.notifications.icon_background" = "#61afef";
@@ -365,6 +368,7 @@
       "theme.bar.buttons.modules.netstat.border" = "#98c379";
       "theme.bar.buttons.modules.storage.border" = "#e06c75";
       "theme.bar.buttons.modules.cpu.border" = "#e06c75";
+      "theme.bar.buttons.modules.cpuTemp.border" = "#61afef";
       "theme.bar.buttons.modules.ram.border" = "#e5c07b";
       "theme.bar.buttons.notifications.border" = "#61afef";
       "theme.bar.buttons.clock.border" = "#98c379";

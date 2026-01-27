@@ -13,9 +13,9 @@
   # git config
   programs.git = {
     enable = true;
-    userName = "Luca Sartore";
-    userEmail = "lucasartore02@gmail.com";
-    extraConfig = { 
+    settings = {
+      user.name = "Luca Sartore";
+      user.email = "lucasartore02@gmail.com";
       credential.helper = "manager";
       credential."https://github.com".username = "lucaSartore";
       credential.credentialStore = "cache";
@@ -53,21 +53,30 @@
 
   home.file.".omnisharp/omnisharp.json".source = ../assets/omnisharp.json;
 
-  home.file.bashrc = { # call it whatever you want its just a string id (bashrc)
-    target = ".bashrc"; # or path to bashrc e.g. ".bashrc"
+  home.file.bashrc = {
+    target = ".bashrc";
     text = ''
-      # eval "$(atuin init bash)"
+      eval "$(atuin init bash --disable-up-arrow)"
     '';
   };
 
   home.file.".ideavimrc".source = ../assets/.ideavimrc;
 
   xdg.configFile."hypr/hyprland.conf".source = ../assets/hyprland/hyprland.conf;
+  xdg.configFile."hypr/hyprpaper.conf".source = ../assets/hyprland/hyprpaper.conf;
+  xdg.configFile."hypr/wallpapers" = {
+    source = ../assets/wallpapers;
+    recursive = true;
+  };
+
   xdg.configFile."rofi/config.rasi".source = ../assets/hyprland/config.rasi;
   xdg.configFile."rofi/themes" = {
     source = ../assets/submodules/rofi_themes_collection;
     recursive = true;
   };
+
   xdg.configFile."ghostty/config".source = ../assets/ghostty/config;
+
   xdg.configFile."kanata/kanata.kbd".source = ../assets/submodules/kanata_config/kanata.kbd;
+
 }

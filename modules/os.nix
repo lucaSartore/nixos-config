@@ -149,8 +149,10 @@
   # Use same standard in linux and windows
   time.hardwareClockInLocalTime = true;
 
-  # Enable the KDE Plasma Desktop Environment.
+  # to handle the log in with multiple desktops (kde & hyprland)
   services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  # Enable the KDE Plasma Desktop Environment.
   services.desktopManager.plasma6.enable = true;
 
   # NEVER CHANGE THIS, EVEN IF SISTEM IS UPDATED
