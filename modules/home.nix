@@ -13,9 +13,9 @@
   # git config
   programs.git = {
     enable = true;
-    userName = "Luca Sartore";
-    userEmail = "lucasartore02@gmail.com";
-    extraConfig = { 
+    settings = {
+      user.name = "Luca Sartore";
+      user.email = "lucasartore02@gmail.com";
       credential.helper = "manager";
       credential."https://github.com".username = "lucaSartore";
       credential.credentialStore = "cache";
