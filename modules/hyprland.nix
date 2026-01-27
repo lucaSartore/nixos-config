@@ -29,6 +29,9 @@
     # used for blue-light
     hyprsunset
 
+    #wallpaper utility
+    pkgs-unstable.hyprpaper
+
     # custom alias that run a shell with the network manager tui
     (pkgs.writeShellScriptBin "calias-network-manager" ''
         #!/bin/sh

@@ -63,11 +63,20 @@
   home.file.".ideavimrc".source = ../assets/.ideavimrc;
 
   xdg.configFile."hypr/hyprland.conf".source = ../assets/hyprland/hyprland.conf;
+  xdg.configFile."hypr/hyprpaper.conf".source = ../assets/hyprland/hyprpaper.conf;
+  xdg.configFile."hypr/wallpapers" = {
+    source = ../assets/wallpapers;
+    recursive = true;
+  };
+
   xdg.configFile."rofi/config.rasi".source = ../assets/hyprland/config.rasi;
   xdg.configFile."rofi/themes" = {
     source = ../assets/submodules/rofi_themes_collection;
     recursive = true;
   };
+
   xdg.configFile."ghostty/config".source = ../assets/ghostty/config;
+
   xdg.configFile."kanata/kanata.kbd".source = ../assets/submodules/kanata_config/kanata.kbd;
+
 }
