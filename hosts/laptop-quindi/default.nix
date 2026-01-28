@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/cuda.nix 
   ];
 
   networking.hostName = "laptop-luca-quindi";
