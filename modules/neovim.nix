@@ -41,7 +41,7 @@ in {
     pkgs.wayclip
     # pkgs.dotnetCorePackages.sdk_9_0-bin
     # pkgs.dotnetCorePackages.sdk_8_0-bin
-    pkgs.dotnet-sdk
+    pkgs.dotnet-sdk_9
     pkgs.omnisharp-roslyn
     
     pkgs-unstable.csharpier
