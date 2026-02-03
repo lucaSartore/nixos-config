@@ -45,6 +45,7 @@ in {
     pkgs.omnisharp-roslyn
     
     pkgs-unstable.csharpier
+    pkgs.tree-sitter
   ];
 
   # alias
