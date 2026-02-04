@@ -34,6 +34,7 @@
           unzip
           omnisharp-roslyn
           csharpier
+          tree-sitter
           # wayclip
           # Add more tools as needed
 
