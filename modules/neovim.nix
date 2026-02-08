@@ -35,7 +35,10 @@ in {
     pkgs.nodejs_24
     (pkgs.python3.withPackages (ps: [ 
       ps.numpy
+      ps.debugpy
       ps.matplotlib
+      ps.pandas
+      ps.scipy
     ]))
     pkgs.unzip
     pkgs.wayclip
