@@ -16,7 +16,7 @@
       bar.workspaces.showApplicationIcons = true;
       
       scalingPriority = "both";
-      theme.bar.menus.menu.dashboard.scaling = 80;
+      theme.bar.menus.menu.dashboard.scaling = 60;
       
       menus.clock = {
         time = {
