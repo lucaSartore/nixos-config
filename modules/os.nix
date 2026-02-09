@@ -144,7 +144,7 @@
     pkgs.xhost
 
     # 3D printing
-    pkgs.cura
+    pkgs.cura-appimage
     pkgs-unstable.orca-slicer
 
   ];
