@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }:
+{ config, pkgs, pkgs-unstable, lib, inputs, ... }:
 
 {
 
@@ -142,7 +142,10 @@
 
     pkgs.acl
     pkgs.xhost
-    # pkgs.matlab
+
+    # 3D printing
+    pkgs.cura
+    pkgs-unstable.orca-slicer
 
   ];
 
