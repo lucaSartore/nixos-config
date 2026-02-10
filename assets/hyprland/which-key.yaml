@@ -19,7 +19,7 @@ margin_left: 0
 margin_top: 0
 
 # namespace to use for the layer shell surface
-namespace: "wlr_which_key"
+# namespace: "wlr_which_key"
 
 # Permits key bindings that conflict with compositor key bindings.
 # Default is `false`.
@@ -29,36 +29,27 @@ inhibit_compositor_keyboard_shortcuts: true
 auto_kbd_layout: true
 
 menu:
-  - key: "p"
-    desc: Power
+  - key: "s"
+    desc: ⚙️ Settings
     submenu:
-      - key: "s"
-        desc: Sleep
-        cmd: systemctl suspend
-      - key: "r"
-        desc: Reboot
-        cmd: reboot
-      - key: "o"
-        desc: Off
-        cmd: poweroff
+      - key: "d"
+        desc: Display Settings
+        cmd: nwg-displays
+      - key: "n"
+        desc: Network Settings
+        cmd: iwgtk
+      - key: "b"
+        desc: Bluetooth Settings
+        cmd: overskride
   - key: "l"
-    desc: Laptop Screen
+    desc: ⚡ Launch
     submenu:
       - key: "t"
-        desc: Toggle On/Off
-        cmd: toggle-laptop-display.sh
-      - key: "s"
-        desc: Scale
-        submenu:
-          - key: "1"
-            desc: Set Scale to 1.0
-            cmd: wlr-randr --output eDP-1 --scale 1
-          - key: "2"
-            desc: Set Scale to 1.1
-            cmd: wlr-randr --output eDP-1 --scale 1.1
-          - key: "3"
-            desc: Set Scale to 1.2
-            cmd: wlr-randr --output eDP-1 --scale 1.2
-          - key: "4"
-            desc: Set Scale to 1.3
-            cmd: wlr-randr --output eDP-1 --scale 1.3
+        desc: Terminal
+        cmd: ghostty
+      - key: "c"
+        desc: VsCode
+        cmd: code
+      - key: "b"
+        desc: Browser
+        cmd: google-chrome-stable

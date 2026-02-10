@@ -147,6 +147,14 @@
     pkgs.cura-appimage
     pkgs-unstable.orca-slicer
 
+
+    # GUI to manage wifi connections
+    # (for advanced stuff not handled in hyprlannels)
+    pkgs.iwgtk
+    # GUI to manage Bluetooth connections
+    # (for advanced stuff not handled in hyprlannels)
+    pkgs.overskride
+
   ];
 
   # Use same standard in linux and windows
