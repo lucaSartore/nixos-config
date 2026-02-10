@@ -43,6 +43,9 @@
         ghostty --class=float.custom -e "sleep 0.1 && btop"
       '')
 
+    # to resize, move and disable multiple display
+    pkgs.nwg-displays
+
   ];
 
 
