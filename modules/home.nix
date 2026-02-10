@@ -78,5 +78,6 @@
   xdg.configFile."ghostty/config".source = ../assets/ghostty/config;
 
   xdg.configFile."kanata/kanata.kbd".source = ../assets/submodules/kanata_config/kanata.kbd;
+  xdg.configFile."wlr-which-key/config.yaml".source = ../assets/hyprland/which-key.yaml;
 
 }

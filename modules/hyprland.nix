@@ -46,6 +46,9 @@
     # to resize, move and disable multiple display
     pkgs.nwg-displays
 
+    # simple vim-like keybindings with UI to launch stuff
+    pkgs.wlr-which-key
+
   ];
 
 
