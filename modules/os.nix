@@ -121,6 +121,7 @@
     pkgs.inetutils # includes telnet
     pkgs.jetbrains.clion
     pkgs.bottles
+    pkgs.rerun
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
