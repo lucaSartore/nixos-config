@@ -61,6 +61,11 @@
   };
 
   home.file.".ideavimrc".source = ../assets/.ideavimrc;
+  
+  xdg.configFile."nvim" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nixos-config/assets/submodules/nvim";
+    recursive = true;
+  };
 
   xdg.configFile."hypr/hyprland.conf".source = ../assets/hyprland/hyprland.conf;
   xdg.configFile."hypr/hyprpaper.conf".source = ../assets/hyprland/hyprpaper.conf;

@@ -4,3 +4,6 @@
 [submodule "assets/submodules/kanata_config"]
 	path = assets/submodules/kanata_config
 	url = git@github.com:lucaSartore/IT-ProgrammingLayout.git
+[submodule "assets/submodules/nvim"]
+	path = assets/submodules/nvim
+	url = git@github.com:lucaSartore/nvim.git
