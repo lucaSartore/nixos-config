@@ -122,6 +122,7 @@
     pkgs.jetbrains.clion
     pkgs.bottles
     pkgs.rerun
+    pkgs.pavucontrol # audio control
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
