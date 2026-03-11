@@ -123,6 +123,7 @@
     pkgs.bottles
     pkgs.rerun
     pkgs.popsicle # used to flash usb (alternative to rufus/balena etcher)
+    pkgs.pavucontrol # audio control
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI

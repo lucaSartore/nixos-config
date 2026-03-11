@@ -41,6 +41,9 @@ menu:
       - key: "b"
         desc: Bluetooth Settings
         cmd: overskride
+      - key: "a"
+        desc: Audio settings
+        cmd: pavucontrol
   - key: "l"
     desc: ⚡ Launch
     submenu:
