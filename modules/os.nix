@@ -122,6 +122,7 @@
     pkgs.jetbrains.clion
     pkgs.bottles
     pkgs.rerun
+    pkgs.popsicle # used to flash usb (alternative to rufus/balena etcher)
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
