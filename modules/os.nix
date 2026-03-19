@@ -168,7 +168,7 @@
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   # Enable the KDE Plasma Desktop Environment.
-  services.desktopManager.plasma6.enable = true;
+  # services.desktopManager.plasma6.enable = true;
   services.flatpak.enable = true;
 
   # NEVER CHANGE THIS, EVEN IF SISTEM IS UPDATED

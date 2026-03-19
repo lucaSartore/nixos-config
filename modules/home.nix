@@ -1,7 +1,7 @@
 { config, pkgs, inputs, lib, ... }: {
 
   imports = [ 
-    ./plasma_manager.nix
+    # ./plasma_manager.nix
     ./hyprpanel.nix
   ];
 
