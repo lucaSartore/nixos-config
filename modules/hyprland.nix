@@ -1,4 +1,7 @@
 { config, pkgs, inputs, lib, pkgs-unstable, ... }: {
+
+  
+
   programs.hyprland.enable = true; # enable Hyprland
 
   # kwallet: the kde software to store passwords

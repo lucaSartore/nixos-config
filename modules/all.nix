@@ -14,7 +14,6 @@
     ./docker.nix
     ./shells.nix
     ./nix-ld.nix
-    # ./matlab.nix
     ./databases.nix
     ./hyprland.nix
     ./cpp.nix
