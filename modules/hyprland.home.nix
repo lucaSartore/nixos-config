@@ -17,4 +17,16 @@
     recursive = true;
   };
   xdg.configFile."wlr-which-key/config.yaml".source = ../assets/hyprland/which-key.yaml;
+
+
+  xdg.configFile."kdeglobals".text = ''
+    [General]
+    TerminalApplication=ghostty
+
+    [Icons]
+    Theme=Papirus-Dark
+
+    [KDE]
+    widgetStyle=Darkly
+  '';
 }
