@@ -6,12 +6,12 @@
 
 
   environment.systemPackages =  [
-    # file manager
+    # taken from KDE
     pkgs.kdePackages.dolphin
-
     pkgs.kdePackages.kservice
     pkgs.kdePackages.plasma-workspace
     pkgs.kdePackages.ark
+    pkgs.kdePackages.okular
     # video
     pkgs.mpv
     pkgs.vlc
