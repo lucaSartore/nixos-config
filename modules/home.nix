@@ -1,13 +1,14 @@
-{ config, pkgs, inputs, lib, ... }: {
+{ config, ... }: 
+{
 
   imports = [ 
-    # ./plasma_manager.nix
-    ./hyprland.home.nix
+    ./hyprland.home.panels.nix
     ./home.mimeapps.nix
   ];
 
   home.username = "lucas";
   home.homeDirectory = "/home/lucas";
+
   # The home.stateVersion option does not have a default and must be set
   home.stateVersion = "25.11";
 
@@ -25,40 +26,23 @@
     };
   };
 
-  home.file.".rustup/settings.toml".text = ''
-    default_toolchain = "stable-x86_64-unknown-linux-gnu"
-    profile = "default"
-    version = "12"
+  home.file.".bashrc".source = ../assets/.bashrc;
 
-    [overrides]
-  '';
-
-  home.file.".config/google-chrome/NativeMessagingHosts/org.kde.plasma.browser_integration.json" =
-    {
-      source =
-        "${pkgs.kdePackages.plasma-browser-integration}/etc/chromium/native-messaging-hosts/org.kde.plasma.browser_integration.json";
+  # copy every element of the "assets/dotconfig" folder inside ~/.config with a system link (for quick editing)
+  xdg.configFile = let
+    # list of all the dotfiles (or list of dotfiles) that are tracked by nix
+    nixDotfiles = builtins.attrNames (builtins.readDir  ../assets/dotconfig);
+    # function that given a file name create the configuration
+    mkFile = name: {
+      name = "${name}";
+      value = {
+        source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nixos-config/assets/dotconfig/${name}";
+        recursive = true;
+      };
     };
+  in
+  builtins.listToAttrs (map mkFile nixDotfiles);
 
 
-  home.file.".omnisharp/omnisharp.json".source = ../assets/omnisharp.json;
-
-  home.file.bashrc = {
-    target = ".bashrc";
-    text = ''
-      eval "$(atuin init bash --disable-up-arrow)"
-    '';
-  };
-
-  home.file.".ideavimrc".source = ../assets/.ideavimrc;
-  
-  xdg.configFile."nvim" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nixos-config/assets/submodules/nvim";
-    recursive = true;
-  };
-
-
-  xdg.configFile."ghostty/config".source = ../assets/ghostty/config;
-
-  xdg.configFile."kanata/kanata.kbd".source = ../assets/submodules/kanata_config/kanata.kbd;
 
 }
