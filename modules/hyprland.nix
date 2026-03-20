@@ -1,6 +1,8 @@
 { config, pkgs, inputs, lib, pkgs-unstable, ... }: {
 
-  
+  imports = [
+    ./hyprland.apps.nix
+  ];
 
   programs.hyprland.enable = true; # enable Hyprland
 
@@ -53,8 +55,6 @@
     pkgs.wlr-which-key
 
   ];
-
-
 
   # Optional, hint Electron apps to use Wayland:
   # need to try this again in the future... currently

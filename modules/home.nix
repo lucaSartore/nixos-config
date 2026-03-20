@@ -3,6 +3,7 @@
   imports = [ 
     # ./plasma_manager.nix
     ./hyprland.home.nix
+    ./home.mimeapps.nix
   ];
 
   home.username = "lucas";
@@ -21,18 +22,6 @@
       credential.credentialStore = "cache";
       safe.directory = "/etc/nixos"; 
       pull.rebase = false;
-    };
-  };
-
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      ##### Browser defaults ####
-      "text/html" = "google-chrome.desktop";
-      "x-scheme-handler/http" = "google-chrome.desktop";
-      "x-scheme-handler/https" = "google-chrome.desktop";
-      "x-scheme-handler/about" = "google-chrome.desktop";
-      "x-scheme-handler/unknown" = "google-chrome.desktop";
     };
   };
 
