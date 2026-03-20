@@ -33,26 +33,44 @@ menu:
     desc: ⚙️ Settings
     submenu:
       - key: "d"
-        desc: Display Settings
+        desc: 🖥️ Display Settings
         cmd: nwg-displays
       - key: "n"
-        desc: Network Settings
+        desc: 📡 Network Settings
         cmd: iwgtk
       - key: "b"
-        desc: Bluetooth Settings
+        desc: 🅱️ Bluetooth Settings
         cmd: overskride
       - key: "a"
-        desc: Audio settings
+        desc: 🔉 Audio settings
         cmd: pavucontrol
   - key: "l"
     desc: ⚡ Launch
     submenu:
       - key: "t"
-        desc: Terminal
+        desc: 💻 Terminal
         cmd: ghostty
       - key: "c"
-        desc: VsCode
+        desc: 📝 VsCode
         cmd: code
       - key: "b"
-        desc: Browser
+        desc: 🌐 Browser
         cmd: google-chrome-stable
+      - key: "f"
+        desc: 📂 Files
+        cmd: dolphin
+  - key: "x"
+    desc: 🚀 Power
+    submenu:
+      - key: "l"
+        desc: 🔒 Lock
+        cmd: swaylock
+      - key: "s"
+        desc: 💤 Suspend
+        cmd: systemctl suspend
+      - key: "r"
+        desc: 🔄 Reboot
+        cmd: reboot
+      - key: "p"
+        desc: 🛑 Power Off
+        cmd: poweroff
