@@ -126,6 +126,7 @@
     pkgs.pavucontrol # audio control
     pkgs.udiskie
     pkgs.kdePackages.polkit-kde-agent-1
+    pkgs.mission-center
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
