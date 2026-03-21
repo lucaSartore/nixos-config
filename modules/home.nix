@@ -27,6 +27,10 @@
   };
 
   home.file.".bashrc".source = ../assets/.bashrc;
+  home.file.".omnisharp/omnisharp.json".source = ../assets/.omnisharp/omnisharp.json;
+  home.file.".ideavimrc".source = ../assets/.ideavimrc;
+  home.file.".rustup/settings.toml".source = ../assets/.rustup/settings.toml;
+
 
   # copy every element of the "assets/dotconfig" folder inside ~/.config with a system link (for quick editing)
   xdg.configFile = let
