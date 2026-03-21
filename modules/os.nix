@@ -107,7 +107,7 @@
     pkgs.conda
     pkgs.postman
     pkgs.discord
-    pkgs.kdePackages.partitionmanager
+    pkgs.gnome-disk-utility
     pkgs.openvpn
     pkgs.remmina # remote desktop
     pkgs.anydesk
@@ -124,6 +124,8 @@
     pkgs.rerun
     pkgs.popsicle # used to flash usb (alternative to rufus/balena etcher)
     pkgs.pavucontrol # audio control
+    pkgs.udiskie
+    pkgs.kdePackages.polkit-kde-agent-1
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
@@ -160,6 +162,7 @@
     pkgs.overskride
 
   ];
+  
 
   # Use same standard in linux and windows
   time.hardwareClockInLocalTime = true;
@@ -170,6 +173,11 @@
   # Enable the KDE Plasma Desktop Environment.
   # services.desktopManager.plasma6.enable = true;
   services.flatpak.enable = true;
+
+  # mounting disks automatically and stuff
+  services.udisks2.enable = true;
+  security.polkit.enable = true;
+
 
   # NEVER CHANGE THIS, EVEN IF SISTEM IS UPDATED
   # Or perhaps read the docs before changing it
