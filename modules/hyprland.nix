@@ -1,5 +1,13 @@
-{ config, pkgs, inputs, lib, pkgs-unstable, ... }: {
-
+{ config, pkgs, inputs, lib, pkgs-unstable, ... }: 
+let 
+  custom_sddm_astronaut = pkgs.sddm-astronaut.override {
+    # embeddedTheme = "hyprland_kath";
+    themeConfig = {
+      Background = "${../assets/dotconfig/hypr/wallpapers/od_abstract.png}";
+    };
+  };
+in
+{
   imports = [
     ./hyprland.apps.nix
   ];
@@ -37,24 +45,29 @@
     #wallpaper utility
     pkgs-unstable.hyprpaper
 
-    # custom alias that run a shell with the network manager tui
-    (pkgs.writeShellScriptBin "calias-network-manager" ''
-        #!/bin/sh
-        ghostty --class=float.custom -e "sleep 0.1 && nmtui"
-      '')
-    # custom alias that run a b-top shell
-    (pkgs.writeShellScriptBin "calias-btop-shell" ''
-        #!/bin/sh
-        ghostty --class=float.custom -e "sleep 0.1 && btop"
-      '')
-
     # to resize, move and disable multiple display
     pkgs.nwg-displays
 
     # simple vim-like keybindings with UI to launch stuff
     pkgs.wlr-which-key
 
+    # theming for ssdm
+    custom_sddm_astronaut
   ];
+
+
+  # to handle the log in with multiple desktops (kde & hyprland)
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    theme = "sddm-astronaut-theme";
+    extraPackages = [ custom_sddm_astronaut ];
+    settings = {
+      Theme = {
+        Current = "sddm-astronaut-theme";
+      };
+    };
+  };
 
   # Optional, hint Electron apps to use Wayland:
   # need to try this again in the future... currently
