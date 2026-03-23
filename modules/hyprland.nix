@@ -26,6 +26,13 @@ in
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.twitter-color-emoji
   ];
+  
+  # to sleep/wake up properly
+  powerManagement.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+  };
 
   environment.systemPackages = with pkgs; [
     # menu
