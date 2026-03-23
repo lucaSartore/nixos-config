@@ -64,13 +64,16 @@ menu:
     submenu:
       - key: "l"
         desc: 🔒 Lock
-        cmd: swaylock
+        cmd: hyprlock
       - key: "s"
         desc: 💤 Suspend
-        cmd: systemctl suspend
+        cmd: hyprlock & sleep 0.5 && systemctl suspend
+      - key: "e"
+        desc: 🚪 Exit
+        cmd: hyprctl dispatch exit
       - key: "r"
         desc: 🔄 Reboot
-        cmd: reboot
+        cmd: systemctl reboot
       - key: "p"
         desc: 🛑 Power Off
-        cmd: poweroff
+        cmd: systemctl poweroff

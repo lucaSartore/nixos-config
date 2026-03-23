@@ -26,6 +26,7 @@ in
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.twitter-color-emoji
   ];
+
   
   # to sleep/wake up properly
   powerManagement.enable = true;
@@ -60,6 +61,10 @@ in
 
     # theming for ssdm
     custom_sddm_astronaut
+
+    # locking utilities
+    pkgs.hyprlock
+    pkgs.hypridle
   ];
 
 
