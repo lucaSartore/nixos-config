@@ -3,7 +3,6 @@
 {
   imports = [ 
     ../../modules/home.nix
-    ../../modules/hyprpanel.laptop.nix
     ../../modules/hyprland.home.panels.laptop.nix
   ];
 
