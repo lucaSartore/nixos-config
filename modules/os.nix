@@ -127,6 +127,7 @@
     pkgs.udiskie
     pkgs.kdePackages.polkit-kde-agent-1
     pkgs.mission-center
+    pkgs.unixtools.netstat
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
