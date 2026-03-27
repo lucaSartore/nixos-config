@@ -17,6 +17,7 @@
     ./databases.nix
     ./hyprland.nix
     ./cpp.nix
+    ./usb.nix
   ];
 
 }

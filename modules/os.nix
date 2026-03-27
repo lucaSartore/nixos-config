@@ -124,8 +124,6 @@
     pkgs.rerun
     pkgs.popsicle # used to flash usb (alternative to rufus/balena etcher)
     pkgs.pavucontrol # audio control
-    pkgs.udiskie
-    pkgs.kdePackages.polkit-kde-agent-1
     pkgs.mission-center
 
     # Database drivers
