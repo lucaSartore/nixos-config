@@ -20,6 +20,7 @@
         name = "portable-neovim-env";
 
         nativeBuildInputs = with pkgs; [
+          fd
           neovim
           git
           lazygit

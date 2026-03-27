@@ -125,6 +125,7 @@
     pkgs.popsicle # used to flash usb (alternative to rufus/balena etcher)
     pkgs.pavucontrol # audio control
     pkgs.mission-center
+    pkgs.unixtools.netstat
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI

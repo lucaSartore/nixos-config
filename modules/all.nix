@@ -18,6 +18,7 @@
     ./hyprland.nix
     ./cpp.nix
     ./usb.nix
+    ./scripts.nix
   ];
 
 }
