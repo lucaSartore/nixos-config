@@ -2,14 +2,7 @@
 
 CONTAINER_NAME="4e4427033204"
 
-# 1. Find the container name dynamically
-CONTAINER_ID=$(docker ps | grep "vsc-quindisolution" | awk '{print $1}')
-if [ -z "$CONTAINER_ID" ]; then
-    echo "❌ Error: Could not find a running container matching 'vsc-quindisolution'"
-    exit 1
-fi
-
-# 2. Start the SSH Tunnel in the background
+# 1. Start the SSH Tunnel in the background
 echo "🚀 Starting SSH tunnels to quindi-solution.devpod..."
 ssh -M \
     -S /tmp/my-tunnel-socket \
@@ -18,6 +11,13 @@ ssh -M \
     -L 8080:127.0.0.1:8180  \
     -R 3306:localhost:3306 \
     quindi-solution.devpod
+
+# 2. Find the container name dynamically
+CONTAINER_ID=$(docker ps | grep "vsc-quindisolution" | awk '{print $1}')
+if [ -z "$CONTAINER_ID" ]; then
+    echo "❌ Error: Could not find a running container matching 'vsc-quindisolution'"
+    exit 1
+fi
 
 # 3. Enter the Docker Environment
 echo "🐳 Connecting to: $CONTAINER_ID..."
