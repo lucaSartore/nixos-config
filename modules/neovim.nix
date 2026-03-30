@@ -29,6 +29,8 @@
     pkgs.tree-sitter
   ];
 
+  environment.sessionVariables.EDITOR = "nvim";
+
   # alias
   programs.neovim = {
     enable = true;
