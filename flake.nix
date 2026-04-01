@@ -22,6 +22,8 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    sops-nix.url = "github:Mic92/sops-nix";
+
     # nix-matlab = {
     #   inputs.nixpkgs.follows = "nixpkgs";
     #   url = "gitlab:doronbehar/nix-matlab";

@@ -18,8 +18,11 @@ some sensitive informations that can't be put in the git repo
     ```
     if you want to be able to push to upstream (or log in using credentials, but this is easyer)
 
-3) **Set the default configurations**
-    Search for `Default applications` and set them as you wish
+3) **Generate secret key from ssh**
+    More infos on [./modules/secrets.nix]
+    ```
+    mkdir -p ~/.config/sops/age/ && ssh-to-age -private-key -i ~/.ssh/id_ed25519 > ~/.config/sops/age/keys.txt
+    ```
 
 4) **Log in to vscode**
     Log in to vscode using github, and then synchronize settings so that you can get all of your extensions

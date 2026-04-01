@@ -3,7 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, lib, ... }:
-
 {
 
   imports = [
@@ -19,6 +18,7 @@
     ./cpp.nix
     ./usb.nix
     ./scripts.nix
+    ./secrets.nix
   ];
 
 }
