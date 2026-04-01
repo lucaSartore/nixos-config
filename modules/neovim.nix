@@ -23,7 +23,7 @@
     # pkgs.dotnetCorePackages.sdk_9_0-bin
     # pkgs.dotnetCorePackages.sdk_8_0-bin
     pkgs.dotnet-sdk_9
-    pkgs.omnisharp-roslyn
+    pkgs.roslyn-ls
     
     pkgs-unstable.csharpier
     pkgs.tree-sitter

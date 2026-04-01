@@ -33,7 +33,7 @@
           go
           python314
           unzip
-          omnisharp-roslyn
+          roslyn-ls
           csharpier
           tree-sitter
           # wayclip
