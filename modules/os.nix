@@ -139,9 +139,6 @@
     pkgs.xournalpp
     pkgs.rnote
 
-    # for browser integration
-    pkgs.kdePackages.plasma-browser-integration
-
     # themes
     pkgs.papirus-icon-theme
     pkgs.darkly
