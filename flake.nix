@@ -16,12 +16,6 @@
       flake = false;
     };
 
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
-
     sops-nix.url = "github:Mic92/sops-nix";
 
     # nix-matlab = {
@@ -33,7 +27,7 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, plasma-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, ... }:
     let 
       system = "x86_64-linux";
       pkgs-unstable = import nixpkgs-unstable { inherit system; };
@@ -49,8 +43,6 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.lucas = ./hosts/desktop/home.nix;
-              home-manager.sharedModules =
-                [ plasma-manager.homeModules.plasma-manager ];
               home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; };
             }
             ./modules/all.nix
@@ -67,8 +59,6 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.lucas = ./hosts/laptop/home.nix;
-              home-manager.sharedModules =
-                [ plasma-manager.homeModules.plasma-manager ];
               home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; };
             }
             ./modules/all.nix
@@ -85,8 +75,6 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.lucas = ./hosts/laptop-quindi/home.nix;
-              home-manager.sharedModules =
-                [ plasma-manager.homeModules.plasma-manager ];
               home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; };
             }
             ./modules/all.nix

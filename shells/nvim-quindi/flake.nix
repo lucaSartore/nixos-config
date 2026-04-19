@@ -19,7 +19,7 @@
       devShells.${system}.default = pkgs.mkShell {
         name = "portable-neovim-env";
 
-        nativeBuildInputs = with pkgs; [
+        packages = with pkgs; [
           fd
           neovim
           git
@@ -33,12 +33,8 @@
           go
           python314
           unzip
-          omnisharp-roslyn
-          csharpier
+          roslyn-ls
           tree-sitter
-          # wayclip
-          # Add more tools as needed
-
         ];
 
         shellHook = ''
