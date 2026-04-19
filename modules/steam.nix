@@ -1,6 +1,15 @@
 { config, pkgs, lib, ... }: {
 
-  environment.systemPackages = with pkgs; [ pkgs.steam-run ];
+  environment.systemPackages = with pkgs; [ 
+    pkgs.steam-run
+
+
+    # utility command to put in the lauch args of steam
+    # example: gamemode-run <game>
+    (pkgs.writeShellScriptBin "gamemode-run" ''
+      gamescope -f -W 3440 -H 1440 -r 159.96 -- "$@"
+    '')
+  ];
 
   programs.steam = {
     enable = true;
@@ -10,8 +19,14 @@
     # dedicatedServer.openFirewall = true;
   };
 
+  programs.gamescope = {
+    enable = true;
+    capSysNice = true; # Allows Gamescope to use high-priority scheduling
+  };
+
   programs.steam.extraCompatPackages = with pkgs; [
     proton-ge-bin
   ];
+
 
 }
