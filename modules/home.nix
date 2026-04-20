@@ -3,6 +3,7 @@
 
   imports = [ 
     ./hyprland.home.panels.nix
+    ./hyprland.home.nix
     ./home.mimeapps.nix
   ];
 

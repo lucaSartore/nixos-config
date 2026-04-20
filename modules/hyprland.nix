@@ -67,8 +67,6 @@ in
     pkgs.hypridle
   ];
 
-
-  # to handle the log in with multiple desktops (kde & hyprland)
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;

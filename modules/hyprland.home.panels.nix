@@ -37,7 +37,7 @@
       };
 
       theme.font = {
-        name = "JetBrain Mono";
+        name = "JetBrainsMono Nerd Font";
         size = "14px";
       };
 
