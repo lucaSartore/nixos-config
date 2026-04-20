@@ -6,8 +6,8 @@
 
   environment.systemPackages = with pkgs; [
     docker-compose 
-    # devpod-desktop
-    (pkgs.callPackage ../custom_packages/devpod-ce { }).devpod-desktop
+    devpod-desktop
+    # (pkgs.callPackage ../custom_packages/devpod-ce { }).devpod-desktop
   ];
 
   virtualisation.docker = {
