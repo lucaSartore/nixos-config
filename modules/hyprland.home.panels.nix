@@ -37,7 +37,7 @@
       };
 
       theme.font = {
-        # name = "CaskaydiaCove NF";
+        name = "JetBrain Mono";
         size = "14px";
       };
 

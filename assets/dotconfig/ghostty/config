@@ -6,6 +6,8 @@ gtk-single-instance = true
 
 theme = Atom One Dark
 
+font-family = "JetBrainsMono Nerd Font"
+
 # using correct terminal settings in SSH machine
 # shell-integration-features = ssh-terminfo
 # shell-integration-features = ssh-env
