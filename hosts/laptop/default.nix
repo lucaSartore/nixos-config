@@ -10,6 +10,9 @@
   # Enable OpenGL
   hardware.graphics = { enable = true; };
 
+  # battery 
+  services.upower.enable = true;
+
   environment.systemPackages = [
     # touchpad specific packages
     pkgs.kdePackages.wacomtablet

@@ -13,6 +13,8 @@
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "nvidia" ];
+  # battery 
+  services.upower.enable = true;
 
   hardware.nvidia = {
     # Modesetting is required.
