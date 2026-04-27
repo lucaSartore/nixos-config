@@ -21,9 +21,9 @@
 
   # Use latest kernel.
   # boot.kernelPackages = pkgs.linuxPackages_latest;
-  # use LTS kernel
+  # custom kernel
   boot = {
-    kernelPackages = pkgs.linuxPackages_6_18;
+    kernelPackages = pkgs.linuxPackages_7_0;
     # workaround for docker-in-docker issues: https://github.com/NixOS/nixpkgs/issues/451967
     kernelPatches = [
       {
@@ -136,6 +136,7 @@
 
     # Office and other programs
     pkgs.libreoffice-qt6-fresh
+    pkgs.onlyoffice-desktopeditors
     pkgs.xournalpp
     pkgs.rnote
 
