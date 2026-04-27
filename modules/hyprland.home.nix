@@ -2,9 +2,6 @@
 {
   gtk = {
     enable = true;
-    font = {
-      name = "JetBrainsMono Nerd Font";
-    };
     cursorTheme = {
       name = "Bibata-Modern-Classic";
       package = pkgs.bibata-cursors;
