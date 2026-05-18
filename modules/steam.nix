@@ -1,6 +1,10 @@
 { config, pkgs, lib, ... }: {
 
   environment.systemPackages = with pkgs; [ 
+
+    # launcher for GOG, epic and amazon games
+    pkgs.heroic
+
     pkgs.steam-run
 
 
