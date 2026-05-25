@@ -8,7 +8,8 @@ ssh -M \
     -S /tmp/my-tunnel-socket \
     -fN \
     -L 5146:127.0.0.1:5146 \
-    -L 8080:127.0.0.1:8180  \
+    -L 8080:127.0.0.1:8180 \
+    -L 5532:127.0.0.1:5432 \
     -R 3306:localhost:3306 \
     quindi-solution.devpod
 
