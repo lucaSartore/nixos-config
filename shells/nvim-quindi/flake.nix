@@ -14,7 +14,12 @@
   outputs = { self, nixpkgs }:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [
+          "claude-code"
+        ];
+      };
     in {
       devShells.${system}.default = pkgs.mkShell {
         name = "portable-neovim-env";
