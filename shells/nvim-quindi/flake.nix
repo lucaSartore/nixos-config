@@ -35,7 +35,7 @@
           unzip
           roslyn-ls
           tree-sitter
-          nodejs_26
+          nodejs
           claude-code
         ];
 
