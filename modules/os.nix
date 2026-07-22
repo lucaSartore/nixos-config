@@ -23,7 +23,7 @@
   # boot.kernelPackages = pkgs.linuxPackages_latest;
   # custom kernel
   boot = {
-    kernelPackages = pkgs.linuxPackages_7_0;
+    kernelPackages = pkgs.linuxPackages_latest;
     # workaround for docker-in-docker issues: https://github.com/NixOS/nixpkgs/issues/451967
     kernelPatches = [
       {
@@ -110,7 +110,7 @@
     pkgs.gnome-disk-utility
     pkgs.openvpn
     pkgs.remmina # remote desktop
-    pkgs.anydesk
+    # pkgs.anydesk
     pkgs.zoom-us
     pkgs.obs-studio
     pkgs.devcontainer

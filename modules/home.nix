@@ -11,7 +11,7 @@
   home.homeDirectory = "/home/lucas";
 
   # The home.stateVersion option does not have a default and must be set
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 
   # git config
   programs.git = {

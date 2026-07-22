@@ -12,7 +12,11 @@ in
     ./hyprland.apps.nix
   ];
 
-  programs.hyprland.enable = true; # enable Hyprland
+  programs.uwsm.enable = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+  };
 
   # kwallet: the kde software to store passwords
   security.pam.services.lucas.kwallet = {
