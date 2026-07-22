@@ -35,6 +35,8 @@
           unzip
           roslyn-ls
           tree-sitter
+          nodejs_26
+          claude-code
         ];
 
         shellHook = ''
