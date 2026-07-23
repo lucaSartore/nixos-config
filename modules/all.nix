@@ -19,6 +19,7 @@
     ./usb.nix
     ./scripts.nix
     ./secrets.nix
+    ./unfree.nix
   ];
 
 }
