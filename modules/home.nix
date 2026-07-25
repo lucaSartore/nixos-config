@@ -31,6 +31,7 @@
   home.file.".omnisharp/omnisharp.json".source = ../assets/.omnisharp/omnisharp.json;
   home.file.".ideavimrc".source = ../assets/.ideavimrc;
   home.file.".rustup/settings.toml".source = ../assets/.rustup/settings.toml;
+  home.file.".claude/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nixos-config/assets/claude/settings.json";
 
 
   # copy every element of the "assets/dotconfig" folder inside ~/.config with a system link (for quick editing)
