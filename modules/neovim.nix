@@ -17,6 +17,7 @@
       ps.matplotlib
       ps.pandas
       ps.scipy
+      ps.openpyxl
     ]))
     pkgs.unzip
     pkgs.wayclip
