@@ -110,6 +110,8 @@
     pkgs.gnome-disk-utility
     pkgs.openvpn
     pkgs.remmina # remote desktop
+    pkgs.claude-code
+    pkgs.libwebp
     # pkgs.anydesk
     pkgs.zoom-us
     pkgs.obs-studio
