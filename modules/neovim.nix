@@ -18,6 +18,8 @@
       ps.pandas
       ps.scipy
       ps.openpyxl
+      ps.sqlalchemy
+      ps.psycopg2
     ]))
     pkgs.unzip
     pkgs.wayclip
