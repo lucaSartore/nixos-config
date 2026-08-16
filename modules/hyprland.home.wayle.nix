@@ -16,11 +16,11 @@ let
     "bluetooth"
     "battery"
   ] ++ [
-    "dashboard"
-    "hyprland-workspaces"
-    "cpu"
-    "ram"
-    "netstat"
+    "weather"
+    "network"
+    "volume"
+    "systray"
+    "notifications"
   ];
 in
 {
@@ -34,6 +34,8 @@ in
     # nix-instantiate --eval --expr 'builtins.fromTOML (builtins.readFile ./config.toml)'
     settings = {
       bar = {
+        button-bg-opacity = 0;
+        button-variant = "basic";
         background-opacity = 30;
         bg = "#000000";
         button-icon-size = 0.75;
