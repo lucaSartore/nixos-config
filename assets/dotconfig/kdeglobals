@@ -6,3 +6,8 @@ Theme=Papirus-Dark
 
 [KDE]
 widgetStyle=Darkly
+
+[UiSettings]
+ColorScheme=BreezeLight
+# currently have a bug that show some part with light theme, and others with dark theme
+# ColorScheme=BreezeDark
