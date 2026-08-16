@@ -36,14 +36,14 @@
         desktop = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           # specialArgs = { inherit inputs; flake-overlays=flake-overlays; };
-          specialArgs = { inherit inputs pkgs-unstable; };
+          specialArgs = { inherit inputs pkgs-unstable; configName = "desktop"; };
           modules = [
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.lucas = ./hosts/desktop/home.nix;
-              home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; };
+              home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; configName="desktop"; };
             }
             ./modules/all.nix
             ./hosts/desktop
@@ -52,14 +52,14 @@
 
         laptop = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = { inherit inputs pkgs-unstable; };
+          specialArgs = { inherit inputs pkgs-unstable; configName = "laptop"; };
           modules = [
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.lucas = ./hosts/laptop/home.nix;
-              home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; };
+              home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; configName="laptop"; };
             }
             ./modules/all.nix
             ./hosts/laptop
@@ -68,14 +68,14 @@
 
         laptop-quindi = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = { inherit inputs pkgs-unstable; };
+          specialArgs = { inherit inputs pkgs-unstable; configName = "laptop-quindi"; };
           modules = [
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.lucas = ./hosts/laptop-quindi/home.nix;
-              home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; };
+              home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; configName = "laptop-quindi"; };
             }
             ./modules/all.nix
             ./hosts/laptop-quindi

@@ -1,61 +1,77 @@
-{ inputs, pkgs, ... }:
+{ lib, configName, ... }:
+let
+  isLaptop = lib.hasInfix "laptop" configName;
+  centerWidgets = [
+    "clock"
+  ];
+  leftWidgets = [
+    "dashboard"
+    "hyprland-workspaces"
+    "cpu"
+    "ram"
+    "netstat"
+  ];
+
+  rightWidgets = lib.optionals isLaptop [
+    "bluetooth"
+    "battery"
+  ] ++ [
+    "dashboard"
+    "hyprland-workspaces"
+    "cpu"
+    "ram"
+    "netstat"
+  ];
+in
 {
   services.wayle = {
+
     enable = true;
 
-    # Whether to automatically install soft dependencies used by wayle that
-    # will be required based on your config.
     autoInstallDependencies = true;
 
     # tip: you can automatically translate your TOML config to Nix by running
-    # nix-instantiate --eval --expr 'builtins.fromTOML (builtins.readFile ./config.toml)' | nixfmt
+    # nix-instantiate --eval --expr 'builtins.fromTOML (builtins.readFile ./config.toml)'
     settings = {
       bar = {
+        background-opacity = 30;
+        bg = "#000000";
+        button-icon-size = 0.75;
+        button-rounding = "none";
+        padding = 0;
         layout = [
-          # add more attribute sets with different monitors if wayle should
-          # have different layouts on each
           {
-            monitor = "*"; # replace "DP-1" with "*" for all monitors
+            monitor = "*";
+            center = centerWidgets;
+            left = leftWidgets;
+            right = rightWidgets;
             show = true;
-            center = [
-              "clock"
-              "weather"
-            ];
-            left = [ "dashboard" ];
-            right = [ "volume" ];
-          } # this is a 'list' of 'attribute sets', no semi-colons after the closing braces needed
+          }
         ];
+        scale = 0.75;
       };
       modules = {
-        clock = {
-          format = "%H:%M:%S";
-          dropdown-show-seconds = false;
-        };
         weather = {
-          location = "Denver";
-          units = "imperial";
+          location = "Schio";
+          units = "metric";
         };
       };
       osd = {
         monitor = "DP-1";
       };
       styling = {
+        # one dark
         palette = {
-          bg = "#282a36";
-          blue = "#8be9fd";
-          # ...
+          blue = "#56b6c2";
+          elevated = "#3e4451";
+          fg = "#abb2bf";
+          fg-muted = "#5c6370";
+          green = "#98c379";
+          primary = "#61afef";
+          red = "#e06c75";
+          surface = "#282c34";
+          yellow = "#e5c07b";
         };
-        # wallust will be automatically installed if this is set
-        theme-provider = "wallust";
-      };
-      # the following wallpaper option can be omitted if you're not using
-      # wayle's wallpaper engine
-      wallpaper = {
-        # this will automatically install aww
-        engine-enabled = true;
-
-        cycling-directory = "/home/horsey/Pictures/Backgrounds/1/";
-        cycling-mode = "shuffle";
       };
     };
   };
