@@ -2,7 +2,7 @@
 {
 
   imports = [ 
-    ./hyprland.home.panels.nix
+    ./hyprland.home.wayle.nix
     ./hyprland.home.nix
     ./home.mimeapps.nix
   ];
