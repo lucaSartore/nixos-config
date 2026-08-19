@@ -62,6 +62,7 @@ in
         monitor = "DP-1";
       };
       styling = {
+        scale = if isLaptop then 0.75 else 1.0;
         # one dark
         palette = {
           blue = "#56b6c2";
