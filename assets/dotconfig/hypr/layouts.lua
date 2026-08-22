@@ -104,3 +104,11 @@ hl.config({
         new_status = "master",
     },
 })
+
+
+-- default layout
+hl.config({
+    general = {
+        layout = "dwindle",
+    }
+})
