@@ -28,9 +28,11 @@ for i = 1, 10 do
     hl.bind(g.mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
--- Scroll through existing workspaces with mainMod + scroll
-hl.bind(g.mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(g.mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
+-- Scroll through existing workspaces with mainMod + scroll or with "<" and ">"
+hl.bind(g.mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "+1" }))
+hl.bind(g.mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "-1" }))
+hl.bind(g.mainMod .. " + period", hl.dsp.focus({ workspace = "+1" }))
+hl.bind(g.mainMod .. " + comma", hl.dsp.focus({ workspace = "-1" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(g.mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
