@@ -5,11 +5,11 @@ let
   neovim = "nvim.desktop"; # For programming
   terminal = "com.mitchellh.ghostty.desktop";
   pdfviewer = "org.kde.okular.desktop";
-  imgviewer = "org.ksnip.ksnip.desktop";
+  imgviewer = "org.gnome.Loupe.desktop";
   videoplayer = "mpv.desktop";
-  officeWriter = "writer.desktop";
-  officeCalc = "calc.desktop";
-  officeImpress = "impress.desktop";
+  officeWriter = "onlyoffice-desktopeditors.desktop";
+  officeCalc = "onlyoffice-desktopeditors.desktop";
+  officeImpress = "onlyoffice-desktopeditors.desktop";
 in
 {
   xdg.mimeApps = {
