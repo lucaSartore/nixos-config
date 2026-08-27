@@ -161,6 +161,11 @@
     # (for advanced stuff not handled in hyprlannels)
     pkgs.overskride
 
+    (azure-cli.withExtensions [
+      pkgs.azure-cli-extensions.bastion
+      pkgs.azure-cli-extensions.ssh
+    ])
+
   ];
   
 
