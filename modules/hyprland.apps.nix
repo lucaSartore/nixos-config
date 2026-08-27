@@ -18,5 +18,11 @@
     # images
     pkgs.loupe
     pkgs.ksnip
+    # screenshots
+    pkgs.grim
+    pkgs.slurp
+    pkgs-unstable.satty
+    # clipboard manager
+    pkgs.wl-clipboard
   ];
 }

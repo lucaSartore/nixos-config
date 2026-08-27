@@ -1,0 +1,9 @@
+[general]
+fullscreen = "current-screen"
+
+actions-on-enter = ["save-to-clipboard"]
+actions-on-escape = ["save-to-clipboard", "exit"]
+
+disable-notifications = true
+auto-copy = true
+copy-command = "wl-copy"
