@@ -1,5 +1,22 @@
 local g = require("global")
 
+---@param default HL.Dispatcher
+---@param special table<string, HL.Dispatcher>
+---@return function
+local function layout_bind(default, special)
+    return function ()
+        local workspace = hl.get_active_special_workspace() or
+            hl.get_active_workspace()
+
+        if not workspace or not special[workspace.tiled_layout] then
+            return hl.dispatch(default)
+        else
+            hl.dispatch(special[workspace.tiled_layout])
+        end
+    end
+end
+
+
 hl.bind(g.mainMod .. " + T", hl.dsp.exec_cmd(g.terminal))
 hl.bind(g.mainMod .. " + S", hl.dsp.exec_cmd(g.menu))
 hl.bind(g.mainMod .. " + E", hl.dsp.exec_cmd(g.fileManager))
@@ -58,10 +75,23 @@ hl.bind(g.mainMod .. " + SHIFT + K", hl.dsp.window.move({ x = 0, y = -50, relati
 hl.bind(g.mainMod .. " + SHIFT + J", hl.dsp.window.swap({ direction = "down" }))
 hl.bind(g.mainMod .. " + SHIFT + J", hl.dsp.window.move({ x = 0, y = 50, relative = true }), { repeating = true })
 
--- Moving windows with the keyboard
--- NOTE: hl.dsp.window.swap() and the "move by pixels while staying floating"
--- dispatcher weren't fully confirmed for the Lua API — double-check the
--- exact function names/args on the wiki's dispatcher reference before use.
+-- Moving the focused window (per layout specific value)
+hl.bind(g.mainMod .. " + H", layout_bind(
+    hl.dsp.focus({ direction = "left" }),
+    { monocle = hl.dsp.layout("cycleprev") }
+));
+hl.bind(g.mainMod .. " + L", layout_bind(
+    hl.dsp.focus({ direction = "right" }),
+    { monocle = hl.dsp.layout("cyclenext") }
+));
+hl.bind(g.mainMod .. " + J", layout_bind(
+    hl.dsp.focus({ direction = "down" }),
+    { monocle = hl.dsp.layout("cycleprev") }
+));
+hl.bind(g.mainMod .. " + K", layout_bind(
+    hl.dsp.focus({ direction = "up" }),
+    { monocle = hl.dsp.layout("cyclenext") }
+));
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
