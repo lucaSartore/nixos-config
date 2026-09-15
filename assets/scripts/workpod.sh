@@ -20,6 +20,7 @@ if [ "$NO_FORWARD" = false ]; then
         -L 5147:127.0.0.1:5147 \
         -L 8080:127.0.0.1:8180 \
         -L 5532:127.0.0.1:5432 \
+        -L 3909:127.0.0.1:3909 \
         -R 3306:localhost:3306 \
         quindi-solution.devpod
 else
