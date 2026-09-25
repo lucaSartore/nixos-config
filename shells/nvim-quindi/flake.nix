@@ -9,12 +9,21 @@
 {
   description = "Portable Neovim environment";
 
-  inputs = { nixpkgs.url = "github:NixOS/nixpkgs"; };
+  inputs = { 
+    nixpkgs.url = "github:NixOS/nixpkgs"; 
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable"; 
+  };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, nixpkgs-unstable }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [
+          "claude-code"
+        ];
+      };
+      pkgs-unstable = import nixpkgs-unstable {
         inherit system;
         config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [
           "claude-code"
@@ -41,7 +50,7 @@
           roslyn-ls
           tree-sitter
           nodejs
-          claude-code
+          pkgs-unstable.claude-code
         ];
 
         shellHook = ''
