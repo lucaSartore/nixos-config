@@ -72,6 +72,8 @@
     pulse.enable = true;
   };
 
+  services.tailscale.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.lucas = {
     isNormalUser = true;
@@ -128,6 +130,7 @@
     pkgs.pavucontrol # audio control
     pkgs.mission-center
     pkgs.unixtools.netstat
+    pkgs.tailscale
 
     # Database drivers
     pkgs.dbeaver-bin # server client UI
