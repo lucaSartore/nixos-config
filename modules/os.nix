@@ -124,7 +124,6 @@
     pkgs.wget
     pkgs.inetutils # includes telnet
     pkgs.jetbrains.clion
-    pkgs.bottles
     pkgs.rerun
     pkgs.popsicle # used to flash usb (alternative to rufus/balena etcher)
     pkgs.pavucontrol # audio control
