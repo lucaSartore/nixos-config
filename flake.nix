@@ -5,6 +5,7 @@
     self.submodules = true;
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -16,34 +17,44 @@
       flake = false;
     };
 
-    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    # nix-matlab = {
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   url = "gitlab:doronbehar/nix-matlab";
-    # };
-
-    # Optional overlay for bleeding‑edge packages
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, ... }:
-    let 
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      nixpkgs-unstable,
+      home-manager,
+      ...
+    }:
+    let
       system = "x86_64-linux";
       pkgs-unstable = import nixpkgs-unstable { inherit system; };
-    in {
+    in
+    {
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           # specialArgs = { inherit inputs; flake-overlays=flake-overlays; };
-          specialArgs = { inherit inputs pkgs-unstable; configName = "desktop"; };
+          specialArgs = {
+            inherit inputs pkgs-unstable;
+            configName = "desktop";
+          };
           modules = [
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.lucas = ./hosts/desktop/home.nix;
-              home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; configName="desktop"; };
+              home-manager.extraSpecialArgs = {
+                inherit inputs pkgs-unstable;
+                configName = "desktop";
+              };
             }
             ./modules/nixos/all.nix
             ./hosts/desktop
@@ -52,14 +63,20 @@
 
         laptop = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = { inherit inputs pkgs-unstable; configName = "laptop"; };
+          specialArgs = {
+            inherit inputs pkgs-unstable;
+            configName = "laptop";
+          };
           modules = [
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.lucas = ./hosts/laptop/home.nix;
-              home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; configName="laptop"; };
+              home-manager.extraSpecialArgs = {
+                inherit inputs pkgs-unstable;
+                configName = "laptop";
+              };
             }
             ./modules/nixos/all.nix
             ./hosts/laptop
@@ -68,14 +85,20 @@
 
         laptop-quindi = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = { inherit inputs pkgs-unstable; configName = "laptop-quindi"; };
+          specialArgs = {
+            inherit inputs pkgs-unstable;
+            configName = "laptop-quindi";
+          };
           modules = [
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.lucas = ./hosts/laptop-quindi/home.nix;
-              home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; configName = "laptop-quindi"; };
+              home-manager.extraSpecialArgs = {
+                inherit inputs pkgs-unstable;
+                configName = "laptop-quindi";
+              };
             }
             ./modules/nixos/all.nix
             ./hosts/laptop-quindi

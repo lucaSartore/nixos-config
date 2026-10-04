@@ -1,6 +1,5 @@
 # flake containing the necessary software to develop c++
 { config, pkgs, lib, inputs, ... }:
-
 {
 
   environment.systemPackages = with pkgs; [

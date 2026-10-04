@@ -14,10 +14,6 @@
     };
   };
 
-  nix.settings = {
-    # enabling flakes
-    experimental-features = [ "nix-command" "flakes" ];
-  };
 
   # Use latest kernel.
   # boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -82,8 +78,6 @@
     packages = with pkgs; [ kdePackages.kate ];
   };
 
-  # Allow unfree packages (better for driver compatibility)
-  nixpkgs.config.allowUnfree = true;
 
   # default os packages
   environment.systemPackages = with pkgs; [
