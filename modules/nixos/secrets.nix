@@ -34,6 +34,6 @@
   sops.defaultSopsFile = ../../assets/secrets/secrets.yaml;
   sops.defaultSopsFormat = "yaml";
 
-  sops.age.keyFile = "/home/user/.config/sops/age/keys.txt";
+  sops.age.keyFile = "/home/lucas/.config/sops/age/keys.txt";
   sops.secrets.nas_password = { };
 }
