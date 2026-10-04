@@ -45,7 +45,7 @@
               home-manager.users.lucas = ./hosts/desktop/home.nix;
               home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; configName="desktop"; };
             }
-            ./modules/all.nix
+            ./modules/nixos/all.nix
             ./hosts/desktop
           ];
         };
@@ -61,7 +61,7 @@
               home-manager.users.lucas = ./hosts/laptop/home.nix;
               home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; configName="laptop"; };
             }
-            ./modules/all.nix
+            ./modules/nixos/all.nix
             ./hosts/laptop
           ];
         };
@@ -77,7 +77,7 @@
               home-manager.users.lucas = ./hosts/laptop-quindi/home.nix;
               home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; configName = "laptop-quindi"; };
             }
-            ./modules/all.nix
+            ./modules/nixos/all.nix
             ./hosts/laptop-quindi
           ];
         };

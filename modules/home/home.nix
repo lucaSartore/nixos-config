@@ -27,17 +27,17 @@
     };
   };
 
-  home.file.".bashrc".source = ../assets/.bashrc;
-  home.file.".omnisharp/omnisharp.json".source = ../assets/.omnisharp/omnisharp.json;
-  home.file.".ideavimrc".source = ../assets/.ideavimrc;
-  home.file.".rustup/settings.toml".source = ../assets/.rustup/settings.toml;
+  home.file.".bashrc".source = ../../assets/.bashrc;
+  home.file.".omnisharp/omnisharp.json".source = ../../assets/.omnisharp/omnisharp.json;
+  home.file.".ideavimrc".source = ../../assets/.ideavimrc;
+  home.file.".rustup/settings.toml".source = ../../assets/.rustup/settings.toml;
   home.file.".claude/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nixos-config/assets/claude/settings.json";
 
 
   # copy every element of the "assets/dotconfig" folder inside ~/.config with a system link (for quick editing)
   xdg.configFile = let
     # list of all the dotfiles (or list of dotfiles) that are tracked by nix
-    nixDotfiles = builtins.attrNames (builtins.readDir  ../assets/dotconfig);
+    nixDotfiles = builtins.attrNames (builtins.readDir  ../../assets/dotconfig);
     # function that given a file name create the configuration
     mkFile = name: {
       name = "${name}";

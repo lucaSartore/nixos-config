@@ -19,7 +19,7 @@ some sensitive informations that can't be put in the git repo
     if you want to be able to push to upstream (or log in using credentials, but this is easyer)
 
 3) **Generate secret key from ssh**
-    More infos on [./modules/secrets.nix]
+    More infos on [./modules/nixos/secrets.nix]
     ```
     mkdir -p ~/.config/sops/age/ && ssh-to-age -private-key -i ~/.ssh/id_ed25519 > ~/.config/sops/age/keys.txt
     ```

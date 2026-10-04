@@ -3,8 +3,8 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/cuda.nix 
-    ../../modules/steam.nix
+    ../../modules/nixos/cuda.nix
+    ../../modules/nixos/steam.nix
   ];
 
   networking.hostName = "desktop-luca";

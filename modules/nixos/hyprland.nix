@@ -3,7 +3,7 @@ let
   custom_sddm_astronaut = pkgs.sddm-astronaut.override {
     # embeddedTheme = "hyprland_kath";
     themeConfig = {
-      Background = "${../assets/dotconfig/hypr/wallpapers/od_abstract.png}";
+      Background = "${../../assets/dotconfig/hypr/wallpapers/od_abstract.png}";
     };
   };
 in
